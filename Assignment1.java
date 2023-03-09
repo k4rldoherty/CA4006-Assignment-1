@@ -92,10 +92,16 @@ public class Bookstore {
 
     public void createDelivery() {
         // Implement delivery creation logic
+        // (Avg every 100 tics) (list of 10 bookID from any section arrive)
     }
 
     public void addDelivery(Delivery delivery) {
         // Implement delivery addition logic
+        // If assistant is free, take deliveryID to corresponding section
+        // 10 ticks from delivery area to section
+        // 1 tick to put bookID in section
+        // 10 ticks from section to section
+        // 10 ticks when finished deliveryID to walk back to area
     }
 
     public void createCustomer() {
