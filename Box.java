@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Box implements Runnable {
-    static int space = 50;
+    static int space = 200;
     public static List<Books> BooksInBox = new ArrayList<Books>();
     static Box Box_1;
     static Box box = CreateNewBox();
