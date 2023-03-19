@@ -41,7 +41,6 @@ public class Books {
 
         return book;
     }
-    
 
     public static void main(String[] args) {
         Books book = new Books();
