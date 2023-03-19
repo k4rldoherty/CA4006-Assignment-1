@@ -17,7 +17,6 @@ public class Assistant implements Runnable {
     int booksCounter = 0;
     static int carrySpace = 10;
 
-    // Declaring new instance of booksInHands and name for each assistant
     public Assistant(String name, List<Books> booksInHands, int booksCounter) {
         this.booksInHands = booksInHands;
         this.name = name;
@@ -26,20 +25,22 @@ public class Assistant implements Runnable {
 
     // Take books from the box for each assistant with new BooksToTake variable each
     // time, only called if no one is waiting in a queue
+
     public List<Books> takeBooksFromBox() {
         List<Books> books = Box.getBooks();
-        List<Books> booksToTake = new ArrayList<Books>();
-
-        if (!books.isEmpty()) {
-            while (booksToTake.size() < carrySpace) {
-                for (Books book : books) {
-                    booksToTake.add(book);
-                }
-            }
-            books.removeAll(booksToTake);
-            return booksToTake;
-        } else {
+        List<Books> booksToTake = new ArrayList<>();
+    
+        Iterator<Books> iterator = books.iterator();
+        while (iterator.hasNext() && booksToTake.size() < carrySpace) {
+            Books book = iterator.next();
+            iterator.remove();
+            booksToTake.add(book);
+        }
+    
+        if (booksToTake.isEmpty()) {
             return null;
+        } else {
+            return booksToTake;
         }
     }
 
@@ -71,19 +72,18 @@ public class Assistant implements Runnable {
         }
     }
 
-    // Checks to see if a customer is waiting at a particular shelf
-    public boolean IsWaiting(Queue<String> Shelf) {
-        boolean IsWaiting = false;
-        if (Shelf.size() != 0) {
-            IsWaiting = true;
+    // Checks to see if a customer is waiting at a particular section
+    public boolean isWaiting(Queue<String> Section) {
+        boolean isWaiting = false;
+        if (Section.size() != 0) {
+            isWaiting = true;
         }
 
-        return IsWaiting;
+        return isWaiting;
     }
 
     @Override
     public void run() {
-        // continues to run while thread is alive
         while (true) {
             long threadId = Thread.currentThread().getId(); // get current threadID
             try {
@@ -98,22 +98,22 @@ public class Assistant implements Runnable {
                 assistant.acquire(); // semaphore used to to ensure two assistants aren't going to box at the same
                                      // time
                 if (!Box.BooksInBox.isEmpty()) {
-                    if (IsWaiting(Shelve.CrimeWaitingLine)) {
+                    if (isWaiting(Section.CrimeWaitingLine)) {
                         priorityType.add("Crime");
                     }
-                    if (IsWaiting(Shelve.HorrorWaitingLine)) {
+                    if (isWaiting(Section.HorrorWaitingLine)) {
                         priorityType.add("Horror");
                     }
-                    if (IsWaiting(Shelve.RomanceWaitingLine)) {
+                    if (isWaiting(Section.RomanceWaitingLine)) {
                         priorityType.add("Romance");
                     }
-                    if (IsWaiting(Shelve.FantasyWaitingLine)) {
+                    if (isWaiting(Section.FantasyWaitingLine)) {
                         priorityType.add("Fantasy");
                     }
-                    if (IsWaiting(Shelve.FictionWaitingLine)) {
+                    if (isWaiting(Section.FictionWaitingLine)) {
                         priorityType.add("Fiction");
                     }
-                    if (IsWaiting(Shelve.SportWaitingLine)) {
+                    if (isWaiting(Section.SportWaitingLine)) {
                         priorityType.add("Sport");
                     }
                     try {
@@ -137,7 +137,7 @@ public class Assistant implements Runnable {
                             booksInHands = takePriorityBooksFromBox(priorityType);
                         }
                         System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name
-                                + " collected 10 books from the box, the books are: " + booksInHands);
+                                + " collected 10 books from the box: " + booksInHands);
                     } finally {
 
                     }
@@ -163,7 +163,7 @@ public class Assistant implements Runnable {
                         while (iterator.hasNext()) { // while there is still a book in the iterator list
                             book = iterator.next();
                             if (book.toString().equals("Fiction")) { // if said book is a fiction book
-                                Shelve.AddBooksToShelves(book); // stack the fiction book onto the shelf
+                                Section.AddBooksToShelves(book); // stack the fiction book onto the section
                                 iterator.remove(); // remove the book from booksInHands
                                 booksCounter++; // increment a book counter to count how many fiction books were stacked
                                 try {
@@ -172,7 +172,7 @@ public class Assistant implements Runnable {
                                     e.printStackTrace();
                                 }
                             }
-                            if (!iterator.hasNext()) { // stay at the Fiction shelf until all Fiction books are stacked
+                            if (!iterator.hasNext()) { // stay at the Fiction section until all Fiction books are stacked
                                 System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name
                                         + " began stocking FICTION section with " + booksCounter + " books");
                                 booksCounter = 0; // reset counter to 0 so we can reuse it
@@ -187,13 +187,13 @@ public class Assistant implements Runnable {
                             }
                         }
                     }
-                    // operates the same as fiction shelf
+                    // operates the same as fiction section
                     if (booksInHands.toString().contains("Sport")) {
                         iterator = booksInHands.iterator();
                         while (iterator.hasNext()) {
                             book = iterator.next();
                             if (book.toString().equals("Sport")) {
-                                Shelve.AddBooksToShelves(book);
+                                Section.AddBooksToShelves(book);
                                 iterator.remove();
                                 booksCounter++;
                                 try {
@@ -214,13 +214,13 @@ public class Assistant implements Runnable {
                             }
                         }
                     }
-                    // operates the same as fiction shelf
+                    // operates the same as fiction section
                     if (booksInHands.toString().contains("Fantasy")) {
                         iterator = booksInHands.iterator();
                         while (iterator.hasNext()) {
                             book = iterator.next();
                             if (book.toString().equals("Fantasy")) {
-                                Shelve.AddBooksToShelves(book);
+                                Section.AddBooksToShelves(book);
                                 iterator.remove();
                                 booksCounter++;
                                 try {
@@ -241,14 +241,14 @@ public class Assistant implements Runnable {
                             }
                         }
                     }
-                    // operates the same as fiction shelf
+                    // operates the same as fiction section
                     if (booksInHands.toString().contains("Horror")) {
                         iterator = booksInHands.iterator();
 
                         while (iterator.hasNext()) {
                             book = iterator.next();
                             if (book.toString().equals("Horror")) {
-                                Shelve.AddBooksToShelves(book);
+                                Section.AddBooksToShelves(book);
                                 iterator.remove();
                                 booksCounter++;
                                 try {
@@ -269,14 +269,14 @@ public class Assistant implements Runnable {
                             }
                         }
                     }
-                    // operates the same as fiction shelf
+                    // operates the same as fiction section
                     if (booksInHands.toString().contains("Crime")) {
                         iterator = booksInHands.iterator();
 
                         while (iterator.hasNext()) {
                             book = iterator.next();
                             if (book.toString().equals("Crime")) {
-                                Shelve.AddBooksToShelves(book);
+                                Section.AddBooksToShelves(book);
                                 iterator.remove();
                                 booksCounter++;
                                 try {
@@ -297,13 +297,13 @@ public class Assistant implements Runnable {
                             }
                         }
                     }
-                    // operates the same as fiction shelf
+                    // operates the same as fiction section
                     if (booksInHands.toString().contains("Romance")) {
                         iterator = booksInHands.iterator();
                         while (iterator.hasNext()) {
                             book = iterator.next();
                             if (book.toString().equals("Romance")) {
-                                Shelve.AddBooksToShelves(book);
+                                Section.AddBooksToShelves(book);
                                 iterator.remove();
                                 booksCounter++;
                                 try {
@@ -332,7 +332,7 @@ public class Assistant implements Runnable {
                 try {
                     assistantBreak.acquire(); // semaphore acquire so only one assitant can take a break at a time
                     System.out
-                            .println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name + " is on their break.");
+                            .println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name + " is taking a break.");
                     Thread.sleep(150 * Main.TICK_TIME_SIZE); // sleep for 150 ticks
                     randomNumber = rand.nextInt(101) + 200 + assistantTicks; // generate another random number between
                                                                              // 200-300 and add the current assistant
@@ -342,7 +342,7 @@ public class Assistant implements Runnable {
                 } finally {
                     assistantBreak.release(); // release the sempahore so another assistant can take a break
                     System.out.println(
-                            "<" + Main.tickCount + ">" + "<" + threadId + ">" + name + " is back from their break.");
+                            "<" + Main.tickCount + ">" + "<" + threadId + ">" + name + " is back from break, back to work!");
 
                 }
             }

@@ -27,13 +27,13 @@ public class Tick implements Runnable {
                                                              // either True or False
             if (isDelivery == "True") { // if what is returned is True
                 Thread boxThread = new Thread(box); // create a new thread for the box
-                System.out.println("<" + Main.tickCount + "> <" + threadId + ">" + "Recieved a delivery!");
+                System.out.println("<" + Main.tickCount + "><" + threadId + ">" + "New Delivery!");
                 boxThread.run(); // run the box thread and have it stop when it is finished
-                System.out.println("<" + Main.tickCount + "> <" + threadId + ">" + " Box: " + Box.box);
+                System.out.println("<" + Main.tickCount + "><" + threadId + ">" + "Stock Box: " + Box.box);
                 DeliveryCount++; // increment delivery counter
             }
 
-            Main.tickCount++; // increment the tickCount of the program
+            Main.tickCount++; // increment the tickCount
 
             if (Main.tickCount % Main.TICKS_PER_DAY == 0) { // if the tickCount modulo ticks per day (1000) == 0, so
                                                             // every 1000 ticks
@@ -59,11 +59,11 @@ public class Tick implements Runnable {
                 CustomersPrior = Customer.customerCount;
                 CustomersServedPrior = Customer.customerServedCount;
 
-                System.out.println("It is the End of the Day here are the statistics for the Day: ");
-                System.out.println("There was this many customers visting today: " + CustomersInDay);
-                System.out.println("There was this many customers served today: " + CustomersServedInDay);
-                System.out.println("There was this many deliverys: " + DeliveryAmount);
-                System.out.println("The Average Wait Time of Customers was: " + AverageWaitTime);
+                System.out.println("End of day stats: ");
+                System.out.println("Total Customers: " + CustomersInDay);
+                System.out.println("Customers Served: " + CustomersServedInDay);
+                System.out.println("Deliveries: " + DeliveryAmount);
+                System.out.println("Average wait time: " + AverageWaitTime);
 
                 Customer.ClearWaitTime(Customer.CustomerWaitTimes); // reset the wait time
                 Tick.DeliveryCount = 0; // reset the delivery count
