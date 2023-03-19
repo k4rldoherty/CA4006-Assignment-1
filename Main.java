@@ -1,7 +1,6 @@
 import java.util.*;
 import javax.swing.*;
 
-// Our Main class is used to run the overall project and all the classes
 public class Main {
     public static int TICKS_PER_DAY = 1000;
     public static int TICK_TIME_SIZE = 1000;
@@ -13,18 +12,28 @@ public class Main {
 
     private final static List<Assistant> assistants = new ArrayList<>();
 
-    // Our Main function which contains the runner code for the entire project
     public static void main(String[] args) {
         // introducing popup GUI boxes for configurable parameters
-        JFrame gui = new JFrame();
-        String getAssistants = JOptionPane.showInputDialog(gui,
-                "How many assistants would you like to work in the Bookstore?");
+        // JFrame gui = new JFrame();
+        // String getAssistants = JOptionPane.showInputDialog(gui,
+        // "How many assistants would you like to work in the Bookstore?");
 
-        String getTicks = JOptionPane.showInputDialog(gui,
-                "Select ticks to Seconds Correlation. (Higher = Slower, Lower = Faster)");
+        // String getTicks = JOptionPane.showInputDialog(gui,
+        // "Select ticks to Seconds Correlation. (Higher = Slower, Lower = Faster)");
+        // int ticks = Integer.parseInt(getTicks);
+        // int assistantsAmount = Integer.parseInt(getAssistants);
 
-        int ticks = Integer.parseInt(getTicks);
-        int assistantsAmount = Integer.parseInt(getAssistants);
+        System.out.println("How many assistants work at the book store?");
+        Scanner scanner = new Scanner(System.in);
+        String assistantCount = scanner.nextLine();
+        System.out.println(assistantCount + " assistants are working");
+        int assistantsAmount = Integer.parseInt(assistantCount);
+
+        System.out.println("How many ticks will pass every second in the simulation?");
+        String ticksCount = scanner.nextLine();
+        System.out.println(ticksCount + " ticks will pass every second");
+        int ticks = Integer.parseInt(ticksCount);
+        scanner.close();
 
         // Ensuring the input by user is valid and if it is not defaulting to
         // alternative values
