@@ -73,7 +73,6 @@ public class Box implements Runnable {
         Delivery Delivery = new Delivery();
         List<Books> delivery_1 = Delivery.GenerateDelivery();
         box.FillBox(delivery_1);
-
     }
 
     @Override

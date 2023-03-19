@@ -59,13 +59,4 @@ public class Shelve {
         }
 
     }
-
-    @Override
-    public String toString() {
-        return "";
-    }
-
-    public static void main(String[] args) {
-
-    }
 }
