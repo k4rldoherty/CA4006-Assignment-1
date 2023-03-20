@@ -1,21 +1,17 @@
 import java.util.*;
 
-public class Delivery {
-    static Object Books = new Books();
+public class Delivery implements Runnable {
+    public static Box box = new Box();
+    static Object Book = new Book();
     static int size = 10;
-    public static List<Books> DeliveryList = new ArrayList<Books>();
+    public static List<Book> DeliveryList = new ArrayList<Book>();
     static int DeliveryCount = 0;
 
-    public static List<Books> GenerateDelivery() {
+    public static List<Book> GenerateDelivery() {
         int i = 0;
-
         while (i < size) {
-            Books book = new Books();
-
-            book.setCategory();
-
+            Book book = new Book();
             DeliveryList.add(book);
-
             i++;
         }
         return DeliveryList;
@@ -51,4 +47,21 @@ public class Delivery {
 
     }
 
+    @Override
+    public void run() {
+        while (true) {
+            try {
+                Thread.sleep(1 * Main.TICK_TIME_SIZE);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            long threadId = Thread.currentThread().getId();
+            String isDelivery = Delivery.NextDeliveryTime(); 
+            if (isDelivery == "True") {
+                Thread boxThread = new Thread(box);
+                System.out.println("<" + Main.tickCount + "><" + threadId + ">" + "New Delivery!");
+                boxThread.run();
+            }
+        }
+    }    
 }

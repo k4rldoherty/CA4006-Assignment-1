@@ -136,6 +136,7 @@ public class Customer implements Runnable {
     public void run() {
         // Infinite Loop
         while (true) {
+            Main.tickCount++;
             // Try to sleep the thread for 10 ticks
             try {
                 Thread.sleep(1 * Main.TICK_TIME_SIZE);
@@ -154,7 +155,7 @@ public class Customer implements Runnable {
                 // Getting the next customers genre wanted
                 String genre = genres[random.nextInt(genres.length)];
 
-                List<Books> section = new ArrayList<Books>();
+                List<Book> section = new ArrayList<Book>();
                 Queue<String> waitline = new LinkedList<>();
 
                 if (genre == "fiction"){

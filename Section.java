@@ -2,12 +2,12 @@ import java.util.*;
 
 public class Section {
     static int capacity = 30;
-    static List<Books> FictionSection = new ArrayList<Books>();
-    static List<Books> HorrorSection = new ArrayList<Books>();
-    static List<Books> SportSection = new ArrayList<Books>();
-    static List<Books> FantasySection = new ArrayList<Books>();
-    static List<Books> RomanceSection = new ArrayList<Books>();
-    static List<Books> CrimeSection = new ArrayList<Books>();
+    static List<Book> FictionSection = new ArrayList<Book>();
+    static List<Book> HorrorSection = new ArrayList<Book>();
+    static List<Book> SportSection = new ArrayList<Book>();
+    static List<Book> FantasySection = new ArrayList<Book>();
+    static List<Book> RomanceSection = new ArrayList<Book>();
+    static List<Book> CrimeSection = new ArrayList<Book>();
     static Queue<String> FictionWaitingLine = new LinkedList<>();
     static Queue<String> HorrorWaitingLine = new LinkedList<>();
     static Queue<String> SportWaitingLine = new LinkedList<>();
@@ -15,7 +15,7 @@ public class Section {
     static Queue<String> RomanceWaitingLine = new LinkedList<>();
     static Queue<String> CrimeWaitingLine = new LinkedList<>();
 
-    public static void AddBooksToShelves(Books book) {
+    public static void AddBooksToShelves(Book book) {
 
         if (book.toString().equals("Fiction")) {
             if (FictionSection.size() < capacity) {

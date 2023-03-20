@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.*;
 
 public class Main {
@@ -5,13 +8,12 @@ public class Main {
     public static int TICK_TIME_SIZE = 1000;
 
     public static int tickCount = 0;
-    public static Box box = new Box();
-    private static List<Books> booksInHands = new ArrayList<Books>();
+    private static List<Book> booksInHands = new ArrayList<Book>();
     private static int booksCounter = 0;
 
-    private final static List<Assistant> assistants = new ArrayList<>();
 
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws FileNotFoundException {
 
         // Configurable Assistant Count
         System.out.println("How many assistants work at the book store?");
@@ -42,14 +44,20 @@ public class Main {
             TICK_TIME_SIZE = ticks;
         }
 
+        File file = new File("output.txt");
+        //Instantiating the PrintStream class
+        PrintStream stream = new PrintStream(file);
+        System.out.println("From now on "+file.getAbsolutePath()+" will be where you can see your output");
+        System.setOut(stream);
+
+        
         // Adding the threads to a list of threads
         List<Thread> threads = new ArrayList<>();
+        threads.add(new Thread(new Delivery()));
         for (int i = 0; i < assistantsAmount; i++) {
-            assistants.add(new Assistant("<<Assistant-" + i + ">>", booksInHands, booksCounter));
             threads.add(new Thread(new Assistant("<<Assistant-" + i + ">>", booksInHands, booksCounter)));
         }
         threads.add(new Thread(new Customer()));
-        threads.add(new Thread(new Tick(box)));
 
         // Starting all the threads contained in the list
         for (Thread thread : threads) {
