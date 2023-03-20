@@ -49,27 +49,23 @@ public class Assistant implements Runnable {
     // with a list of genres being passed through where customers are waiting
     public List<Books> takePriorityBooksFromBox(List<String> priorityType) {
         List<Books> books = Box.getBooks();
-        List<Books> booksToTake = new ArrayList<Books>();
-
+        List<Books> booksToTake = new ArrayList<>();
+    
         int i = 0;
-        if (!books.isEmpty()) {
-            while (booksToTake.size() < carrySpace) {
-                for (Books book : books) {
-                    while (i < priorityType.size()) {
-                        if (book.toString() == priorityType.get(i)) {
-                            booksToTake.add(book);
-                        }
-                        i++;
-                    }
-
+        while (i < priorityType.size() && booksToTake.size() < carrySpace) {
+            for (Iterator<Books> iter = books.iterator(); iter.hasNext();) {
+                Books book = iter.next();
+                if (book.toString().equals(priorityType.get(i))) {
                     booksToTake.add(book);
+                    iter.remove();
                 }
             }
-            books.removeAll(booksToTake);
-            return booksToTake;
-        } else {
-            return null;
+            i++;
         }
+        while (booksToTake.size() < carrySpace && !books.isEmpty()) {
+            booksToTake.add(books.remove(0));
+        }
+        return booksToTake.isEmpty() ? null : booksToTake;
     }
 
     // Checks to see if a customer is waiting at a particular section

@@ -1,4 +1,7 @@
 import java.util.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 
 public class Main {
     public static int TICKS_PER_DAY = 1000;
@@ -11,7 +14,7 @@ public class Main {
 
     private final static List<Assistant> assistants = new ArrayList<>();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
         // Configurable Assistant Count
         System.out.println("How many assistants work at the book store?");
@@ -41,6 +44,12 @@ public class Main {
         } else {
             TICK_TIME_SIZE = ticks;
         }
+
+        File file = new File("output.txt");
+        //Instantiating the PrintStream class
+        PrintStream stream = new PrintStream(file);
+        System.out.println("From now on "+file.getAbsolutePath()+" will be where you can see your output");
+        System.setOut(stream);
 
         // Adding the threads to a list of threads
         List<Thread> threads = new ArrayList<>();
