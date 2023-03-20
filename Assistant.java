@@ -2,10 +2,6 @@ import java.util.*;
 import java.util.concurrent.Semaphore;
 
 public class Assistant implements Runnable {
-    // Introducing a customer class to handle the functionality of a customer on a
-    // thread
-    private final Object lock = new Object();
-    private static Books book;
     private int assistantTicks = 0;
     List<String> priorityType = new ArrayList<String>();
     List<Books> booksInHands = new ArrayList<Books>();
@@ -156,171 +152,36 @@ public class Assistant implements Runnable {
             }
             // as long as books in hands doesn't equal 0, so assistant has books in hands
             if (booksInHands.size() != 0) {
-                synchronized (lock) {
-                    // create an iterator which iterates through the books in hands
+                Map<String, Integer> booksByCategory = new HashMap<>();
+                for (Books book : booksInHands) {
+                    String category = book.Category;
+                    booksByCategory.put(category, booksByCategory.getOrDefault(category, 0) + 1);
+                }
+                for (Map.Entry<String, Integer> entry : booksByCategory.entrySet()) {
+                    String category = entry.getKey();
+                    int count = entry.getValue();
                     Iterator<Books> iterator = booksInHands.iterator();
-                    if (booksInHands.toString().contains("Fiction")) { // if the booksInHands has a fiction book
-                        while (iterator.hasNext()) { // while there is still a book in the iterator list
-                            book = iterator.next();
-                            if (book.toString().equals("Fiction")) { // if said book is a fiction book
-                                Section.AddBooksToShelves(book); // stack the fiction book onto the section
-                                iterator.remove(); // remove the book from booksInHands
-                                booksCounter++; // increment a book counter to count how many fiction books were stacked
-                                try {
-                                    Thread.sleep(1 * Main.TICK_TIME_SIZE);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                            if (!iterator.hasNext()) { // stay at the Fiction section until all Fiction books are stacked
-                                System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name
-                                        + " began stocking FICTION section with " + booksCounter + " books");
-                                booksCounter = 0; // reset counter to 0 so we can reuse it
-                                try {
-                                    Thread.sleep((booksInHands.size() + 10) * Main.TICK_TIME_SIZE); // sleep for one
-                                                                                                    // tick for every
-                                                                                                    // book left in hand
-                                                                                                    // + 10 ticks
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
+                    int booksCounter = 0;
+                    while (iterator.hasNext()) {
+                        Books book = iterator.next();
+                        if (book.Category.equals(category)) {
+                            Section.AddBooksToShelves(book);
+                            iterator.remove();
+                            booksCounter++;
+                            try {
+                                Thread.sleep(1 * Main.TICK_TIME_SIZE);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
                             }
                         }
-                    }
-                    // operates the same as fiction section
-                    if (booksInHands.toString().contains("Sport")) {
-                        iterator = booksInHands.iterator();
-                        while (iterator.hasNext()) {
-                            book = iterator.next();
-                            if (book.toString().equals("Sport")) {
-                                Section.AddBooksToShelves(book);
-                                iterator.remove();
-                                booksCounter++;
-                                try {
-                                    Thread.sleep(1 * Main.TICK_TIME_SIZE);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                            if (!iterator.hasNext()) {
-                                System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name
-                                        + " began stocking SPORT section with " + booksCounter + " books");
-                                booksCounter = 0;
-                                try {
-                                    Thread.sleep((booksInHands.size() + 10) * Main.TICK_TIME_SIZE);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }
-                    }
-                    // operates the same as fiction section
-                    if (booksInHands.toString().contains("Fantasy")) {
-                        iterator = booksInHands.iterator();
-                        while (iterator.hasNext()) {
-                            book = iterator.next();
-                            if (book.toString().equals("Fantasy")) {
-                                Section.AddBooksToShelves(book);
-                                iterator.remove();
-                                booksCounter++;
-                                try {
-                                    Thread.sleep(1 * Main.TICK_TIME_SIZE);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                            if (!iterator.hasNext()) {
-                                System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name
-                                        + " began stocking FANTASY section with " + booksCounter + " books");
-                                booksCounter = 0;
-                                try {
-                                    Thread.sleep((booksInHands.size() + 10) * Main.TICK_TIME_SIZE);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }
-                    }
-                    // operates the same as fiction section
-                    if (booksInHands.toString().contains("Horror")) {
-                        iterator = booksInHands.iterator();
-
-                        while (iterator.hasNext()) {
-                            book = iterator.next();
-                            if (book.toString().equals("Horror")) {
-                                Section.AddBooksToShelves(book);
-                                iterator.remove();
-                                booksCounter++;
-                                try {
-                                    Thread.sleep(1 * Main.TICK_TIME_SIZE);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                            if (!iterator.hasNext()) {
-                                System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name
-                                        + " began stocking HORROR section with " + booksCounter + " books");
-                                booksCounter = 0;
-                                try {
-                                    Thread.sleep((booksInHands.size() + 10) * Main.TICK_TIME_SIZE);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }
-                    }
-                    // operates the same as fiction section
-                    if (booksInHands.toString().contains("Crime")) {
-                        iterator = booksInHands.iterator();
-
-                        while (iterator.hasNext()) {
-                            book = iterator.next();
-                            if (book.toString().equals("Crime")) {
-                                Section.AddBooksToShelves(book);
-                                iterator.remove();
-                                booksCounter++;
-                                try {
-                                    Thread.sleep(1 * Main.TICK_TIME_SIZE);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                            if (!iterator.hasNext()) {
-                                System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name
-                                        + " began stocking CRIME section with " + booksCounter + " books");
-                                booksCounter = 0;
-                                try {
-                                    Thread.sleep((booksInHands.size() + 10) * Main.TICK_TIME_SIZE);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }
-                    }
-                    // operates the same as fiction section
-                    if (booksInHands.toString().contains("Romance")) {
-                        iterator = booksInHands.iterator();
-                        while (iterator.hasNext()) {
-                            book = iterator.next();
-                            if (book.toString().equals("Romance")) {
-                                Section.AddBooksToShelves(book);
-                                iterator.remove();
-                                booksCounter++;
-                                try {
-                                    Thread.sleep(1 * Main.TICK_TIME_SIZE);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                            if (!iterator.hasNext()) {
-                                System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name
-                                        + " began stocking ROMANCE section with " + booksCounter + " books");
-                                booksCounter = 0;
-                                try {
-                                    Thread.sleep((booksInHands.size() + 10) * Main.TICK_TIME_SIZE);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
+                        if (!iterator.hasNext()) {
+                            System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name
+                                    + " began stocking " + category.toUpperCase() + " section with " + booksCounter + " books");
+                            booksCounter = 0;
+                            try {
+                                Thread.sleep((count + 10) * Main.TICK_TIME_SIZE);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
                             }
                         }
                     }
