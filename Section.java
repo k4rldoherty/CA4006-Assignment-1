@@ -21,37 +21,43 @@ public class Section {
             if (FictionSection.size() < capacity) {
                 FictionSection.add(book);
             } else {
-                System.out.println("Fiction at capacity, waiting for more sales to be made");
+                System.out.println("Fiction Capacity Reached, Returning to stock box");
+                Box.BooksInBox.add(book);
             }
         } else if (book.toString().equals("Horror")) {
             if (HorrorSection.size() < capacity) {
                 HorrorSection.add(book);
             } else {
-                System.out.println("Horror at capacity, waiting for more sales to be made");
+                System.out.println("Horror Capacity Reached, Returning to stock box");
+                Box.BooksInBox.add(book);
             }
         } else if (book.toString().equals("Sport")) {
             if (SportSection.size() < capacity) {
                 SportSection.add(book);
             } else {
-                System.out.println("Sport at capacity, waiting for more sales to be made");
+                System.out.println("Sport Capacity Reached, Returning to stock box");
+                Box.BooksInBox.add(book);
             }
         } else if (book.toString().equals("Fantasy")) {
             if (FantasySection.size() < capacity) {
                 FantasySection.add(book);
             } else {
-                System.out.println("Fantasy at capacity, waiting for more sales to be made");
+                System.out.println("FantasyCapacity Reached, Returning to stock box");
+                Box.BooksInBox.add(book);
             }
         } else if (book.toString().equals("Romance")) {
             if (RomanceSection.size() < capacity) {
                 RomanceSection.add(book);
             } else {
-                System.out.println("Romance at capacity, waiting for more sales to be made");
+                System.out.println("Capacity Reached, Returning to stock box");
+                Box.BooksInBox.add(book);
             }
         } else if (book.toString().equals("Crime")) {
             if (CrimeSection.size() < capacity) {
                 CrimeSection.add(book);
             } else {
-                System.out.println("Crime at capacity, waiting for more sales to be made");
+                System.out.println("Capacity Reached, Returning to stock box");
+                Box.BooksInBox.add(book);
             }
         }
     }
