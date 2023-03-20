@@ -35,14 +35,14 @@ public class Box implements Runnable {
         return books;
     }
 
-    public List<Books> FillBox(List<Books> DeliveryList) {
+    public List<Books> FillBox(List<Books> deliveryList) {
         int i = 0;
-        if (DeliveryList.size() != 0) {
-            while (i < DeliveryList.size()) {
+        if (!deliveryList.isEmpty()) {
+            while (i < deliveryList.size()) {
                 if (BooksInBox.size() == space) {
                     return BooksInBox;
                 }
-                Books x = DeliveryList.get(i);
+                Books x = deliveryList.get(i);
 
                 BooksInBox.add(x);
 

@@ -1,261 +1,876 @@
-<1><15>Customer-1 joined the waiting line for horror
-<4><15>Customer-2 joined the waiting line for romance
-<25><15>Customer-3 joined the waiting line for fantasy
-<25><16>New Delivery!
-<25><16>Stock Box: [Fiction, Fantasy, Sport, Horror, Sport, Horror, Crime, Sport, Crime, Fantasy]
-<36><15>Customer-4 joined the waiting line for horror
-<36><12><<Assistant-0>> collected 10 books from the box: [Horror, Horror, Fantasy, Fantasy, Fiction, Sport, Sport, Crime, Sport, Crime]
-<57><12><<Assistant-0>> began stocking FICTION section with 1 books
-<70><15>Customer-5 joined the waiting line for horror
-<70><16>New Delivery!
-<70><16>Stock Box: [Fantasy, Sport, Horror, Horror, Sport, Sport, Romance, Horror, Crime, Sport]
-<79><12><<Assistant-0>> began stocking SPORT section with 3 books
-<80><15>Customer-6 joined the waiting line for crime
-<81><13><<Assistant-1>> collected 10 books from the box: [Horror, Horror, Horror, Romance, Fantasy, Sport, Sport, Sport, Crime, Sport]
-<90><15>Customer-7 joined the waiting line for crime
-<96><12><<Assistant-0>> began stocking FANTASY section with 2 books
-<102><15>Customer-8 bought a book from fiction section.
-<104><13><<Assistant-1>> began stocking SPORT section with 4 books
-<105><15>Customer-9 bought a book from sport section.
-<112><12><<Assistant-0>> began stocking HORROR section with 2 books
-<121><13><<Assistant-1>> began stocking FANTASY section with 1 books
-<126><12><<Assistant-0>> began stocking CRIME section with 2 books
-<139><13><<Assistant-1>> began stocking HORROR section with 3 books
-<152><13><<Assistant-1>> began stocking CRIME section with 1 books
-<154><15>Customer-10 bought a book from sport section.
-<164><13><<Assistant-1>> began stocking ROMANCE section with 1 books
-<167><15>Customer-2 bought a book from romance section.
-<173><15>Customer-12 joined the waiting line for fiction
-<177><15>Customer-13 bought a book from sport section.
-<195><15>Customer-3 bought a book from fantasy section.
-<197><15>Customer-1 bought a book from horror section.
-<210><15>Customer-16 joined the waiting line for fiction
-<211><15>Customer-14 bought a book from fantasy section.
-<222><15>Customer-6 bought a book from crime section.
-<231><15>Customer-19 bought a book from sport section.
-<249><15>Customer-17 bought a book from fantasy section.
-<253><15>Customer-4 bought a book from horror section.
-<262><15>Customer-7 bought a book from crime section.
-<284><15>Customer-23 bought a book from sport section.
-<290><15>Customer-5 bought a book from horror section.
-<298><15>Customer-25 joined the waiting line for fantasy
-<308><15>Customer-26 joined the waiting line for fantasy
-<311><16>New Delivery!
-<311><16>Stock Box: [Fantasy, Romance, Crime, Sport, Fiction, Romance, Romance, Fantasy, Sport, Romance]
-<322><15>Customer-27 bought a book from sport section.
-<322><13><<Assistant-1>> collected 10 books from the box: [Romance, Romance, Romance, Romance, Fantasy, Fantasy, Crime, Fiction, Sport, Sport]
-<325><15>Customer-28 joined the waiting line for fiction
-<328><15>Customer-29 joined the waiting line for romance
-<331><15>Customer-30 joined the waiting line for fiction
-<333><15>Customer-15 bought a book from horror section.
-<343><13><<Assistant-1>> began stocking FICTION section with 1 books
-<361><15>Customer-32 joined the waiting line for fantasy
-<364><13><<Assistant-1>> began stocking SPORT section with 2 books
-<368><15>Customer-21 bought a book from horror section.
+<5><15>Customer-1 joined the waiting line for fantasy
+<23><16>New Delivery!
+<23><16>Stock Box: [Fiction, Fantasy, Sport, Sport, Horror, Sport, Fiction, Horror, Horror, Crime]
+<29><15>Customer-2 joined the waiting line for fiction
+<30><15>Customer-3 joined the waiting line for fiction
+<32><14><<Assistant-2>> collected 10 books from the box: [Fantasy, Fiction, Sport, Sport, Horror, Sport, Fiction, Horror, Horror, Crime]
+<44><15>Customer-4 joined the waiting line for romance
+<50><15>Customer-5 joined the waiting line for crime
+<50><16>New Delivery!
+<50><16>Stock Box: [Horror, Sport, Horror, Sport, Horror, Fantasy, Sport, Romance, Romance, Horror]
+<51><14><<Assistant-2>> began stocking FICTION section with 2 books
+<59><12><<Assistant-0>> collected 10 books from the box: [Romance, Romance, Fantasy, Horror, Sport, Horror, Sport, Horror, Sport, Horror]
+<72><14><<Assistant-2>> began stocking SPORT section with 3 books
+<78><15>Customer-6 joined the waiting line for horror
+<80><12><<Assistant-0>> began stocking SPORT section with 3 books
+<85><15>Customer-7 joined the waiting line for horror
+<87><15>Customer-2 bought a book from fiction section.
+<88><14><<Assistant-2>> began stocking FANTASY section with 1 books
+<97><12><<Assistant-0>> began stocking FANTASY section with 1 books
+<97><15>Customer-9 joined the waiting line for romance
+<103><14><<Assistant-2>> began stocking HORROR section with 3 books
+<108><16>New Delivery!
+<108><16>Stock Box: [Sport, Romance, Horror, Crime, Romance, Sport, Crime, Horror, Horror, Romance]
+<113><12><<Assistant-0>> began stocking HORROR section with 4 books
+<115><14><<Assistant-2>> began stocking CRIME section with 1 books
+<119><13><<Assistant-1>> collected 10 books from the box: [Crime, Crime, Horror, Horror, Horror, Romance, Romance, Romance, Sport, Sport]
+<119><15>Customer-10 joined the waiting line for romance
+<126><15>Customer-4 bought a book from romance section.
+<127><12><<Assistant-0>> began stocking ROMANCE section with 2 books
+<138><13><<Assistant-1>> began stocking SPORT section with 2 books
+<141><15>Customer-3 bought a book from fiction section.
+<156><13><<Assistant-1>> began stocking HORROR section with 3 books
+<164><15>Customer-1 bought a book from fantasy section.
+<172><13><<Assistant-1>> began stocking CRIME section with 2 books
+<183><15>Customer-6 bought a book from horror section.
+<187><13><<Assistant-1>> began stocking ROMANCE section with 3 books
+<198><15>Customer-7 bought a book from horror section.
+<201><15>Customer-14 bought a book from horror section.
+<203><15>Customer-17 bought a book from sport section.
+<211><15>Customer-5 bought a book from crime section.
+<226><15>Customer-13 bought a book from fantasy section.
+<251><15>Customer-20 joined the waiting line for fiction
+<259><15>Customer-21 joined the waiting line for fiction
+<272><15>Customer-22 bought a book from sport section.
+<278><15>Customer-18 bought a book from crime section.
+<294><15>Customer-24 joined the waiting line for fantasy
+<302><15>Customer-9 bought a book from romance section.
+<306><15>Customer-26 joined the waiting line for fantasy
+<320><15>Customer-27 bought a book from sport section.
+<321><16>New Delivery!
+<321><16>Stock Box: [Romance, Fantasy, Crime, Fiction, Fantasy, Fiction, Crime, Crime, Romance, Romance]
+<331><13><<Assistant-1>> collected 10 books from the box: [Crime, Crime, Crime, Romance, Romance, Romance, Fantasy, Fantasy, Fiction, Fiction]
+<346><13><<Assistant-1>> began stocking FICTION section with 2 books
+<360><13><<Assistant-1>> began stocking FANTASY section with 2 books
+<365><15>Customer-28 bought a book from sport section.
 <369><14><<Assistant-2>> is taking a break.
-<371><15>Customer-12 bought a book from fiction section.
-<373><15>Customer-18 bought a book from crime section.
-<374><15>Customer-36 joined the waiting line for horror
-<383><13><<Assistant-1>> began stocking FANTASY section with 2 books
-<389><15>Customer-37 bought a book from sport section.
-<392><15>Customer-38 joined the waiting line for fiction
-<393><15>Customer-39 joined the waiting line for horror
-<398><13><<Assistant-1>> began stocking CRIME section with 1 books
-<399><15>Customer-20 bought a book from fantasy section.
-<412><15>Customer-25 bought a book from fantasy section.
-<416><13><<Assistant-1>> began stocking ROMANCE section with 4 books
-<421><16>New Delivery!
-<421><16>Stock Box: [Horror, Sport, Sport, Sport, Romance, Sport, Sport, Horror, Crime, Romance]
-<425><15>Customer-22 bought a book from crime section.
-<435><15>Customer-43 joined the waiting line for fiction
-<437><13><<Assistant-1>> collected 10 books from the box: [Horror, Horror, Romance, Romance, Crime, Sport, Sport, Sport, Sport, Sport]
-<440><15>Customer-11 bought a book from romance section.
-<442><15>Customer-45 joined the waiting line for horror
-<443><15>Customer-46 joined the waiting line for fantasy
-<448><15>Customer-47 joined the waiting line for fiction
-<449><15>Customer-48 joined the waiting line for fantasy
-<452><15>Customer-49 joined the waiting line for fantasy
-<457><15>Customer-50 joined the waiting line for horror
-<459><15>Customer-29 bought a book from romance section.
-<462><13><<Assistant-1>> began stocking SPORT section with 5 books
-<463><15>Customer-52 bought a book from sport section.
-<472><15>Customer-53 joined the waiting line for fiction
-<478><13><<Assistant-1>> began stocking HORROR section with 2 books
-<478><16>New Delivery!
-<478><16>Stock Box: [Sport, Sport, Crime, Fiction, Crime, Horror, Romance, Fantasy, Fantasy, Horror]
-<484><15>Customer-44 bought a book from romance section.
-<492><13><<Assistant-1>> began stocking CRIME section with 1 books
-<506><13><<Assistant-1>> began stocking ROMANCE section with 2 books
-<517><12><<Assistant-0>> is taking a break.
-<517><14><<Assistant-2>> is back from break, back to work!
-<520><15>Customer-55 joined the waiting line for fantasy
-<524><15>Customer-56 bought a book from sport section.
-<527><15>Customer-57 joined the waiting line for fantasy
-<527><13><<Assistant-1>> collected 10 books from the box: [Horror, Horror, Romance, Fantasy, Fantasy, Crime, Crime, Fiction, Sport, Sport]
-<534><15>Customer-58 bought a book from sport section.
-<541><15>Customer-59 joined the waiting line for fantasy
-<544><15>Customer-60 bought a book from sport section.
-<547><13><<Assistant-1>> began stocking FICTION section with 1 books
-<568><13><<Assistant-1>> began stocking SPORT section with 2 books
-<569><15>Customer-61 bought a book from sport section.
-<577><16>New Delivery!
-<577><16>Stock Box: [Fiction, Fiction, Fiction, Horror, Horror, Sport, Fantasy, Romance, Sport, Sport]
-<587><13><<Assistant-1>> began stocking FANTASY section with 2 books
-<588><14><<Assistant-2>> collected 10 books from the box: [Horror, Horror, Romance, Fantasy, Fiction, Fiction, Fiction, Sport, Sport, Sport]
-<588><15>Customer-35 bought a book from crime section.
-<593><15>Customer-16 bought a book from fiction section.
-<595><15>Customer-24 bought a book from horror section.
-<603><13><<Assistant-1>> began stocking HORROR section with 2 books
-<606><15>Customer-65 joined the waiting line for fiction
-<611><14><<Assistant-2>> began stocking FICTION section with 3 books
-<618><13><<Assistant-1>> began stocking CRIME section with 2 books
-<621><15>Customer-42 bought a book from crime section.
-<630><13><<Assistant-1>> began stocking ROMANCE section with 1 books
-<631><14><<Assistant-2>> began stocking SPORT section with 3 books
-<634><15>Customer-51 bought a book from romance section.
-<643><15>Customer-26 bought a book from fantasy section.
-<645><14><<Assistant-2>> began stocking FANTASY section with 1 books
-<660><14><<Assistant-2>> began stocking HORROR section with 2 books
-<660><16>New Delivery!
-<660><16>Stock Box: [Horror, Sport, Horror, Crime, Fiction, Fantasy, Horror, Sport, Crime, Fiction]
-<664><12><<Assistant-0>> is back from break, back to work!
-<671><13><<Assistant-1>> collected 10 books from the box: [Horror, Horror, Horror, Fantasy, Crime, Crime, Fiction, Fiction, Sport, Sport]
-<672><14><<Assistant-2>> began stocking ROMANCE section with 1 books
-<684><15>Customer-69 bought a book from sport section.
-<692><13><<Assistant-1>> began stocking FICTION section with 2 books
-<704><15>Customer-32 bought a book from fantasy section.
-<712><15>Customer-40 bought a book from fantasy section.
-<712><13><<Assistant-1>> began stocking SPORT section with 2 books
-<729><13><<Assistant-1>> began stocking FANTASY section with 1 books
-<740><15>Customer-28 bought a book from fiction section.
-<746><13><<Assistant-1>> began stocking HORROR section with 3 books
-<755><15>Customer-30 bought a book from fiction section.
-<760><13><<Assistant-1>> began stocking CRIME section with 2 books
-<768><15>Customer-74 bought a book from sport section.
-<778><15>Customer-75 bought a book from sport section.
-<780><15>Customer-31 bought a book from horror section.
-<786><15>Customer-77 bought a book from sport section.
-<790><15>Customer-41 bought a book from fantasy section.
-<803><16>New Delivery!
-<803><16>Stock Box: [Fantasy, Sport, Horror, Horror, Fiction, Horror, Romance, Horror, Sport, Romance]
-<809><15>Customer-54 bought a book from romance section.
-<814><13><<Assistant-1>> collected 10 books from the box: [Horror, Horror, Horror, Horror, Romance, Romance, Fantasy, Fiction, Sport, Sport]
-<815><15>Customer-34 bought a book from fiction section.
-<822><15>Customer-62 bought a book from crime section.
-<826><16>New Delivery!
-<826><16>Stock Box: [Sport, Sport, Sport, Fiction, Horror, Sport, Romance, Sport, Fantasy, Fiction]
-<831><15>Customer-38 bought a book from fiction section.
-<835><13><<Assistant-1>> began stocking FICTION section with 1 books
-<837><15>Customer-67 bought a book from romance section.
-<840><16>New Delivery!
-<840><16>Stock Box: [Sport, Sport, Sport, Fiction, Horror, Sport, Romance, Sport, Fantasy, Fiction, Sport, Fiction, Fiction, Sport, Romance, Sport, Fantasy, Fantasy, Sport, Crime]
-<843><12><<Assistant-0>> collected 10 books from the box: [Horror, Romance, Fantasy, Fiction, Fiction, Sport, Sport, Sport, Sport, Sport]
-<849><15>Customer-33 bought a book from horror section.
-<855><13><<Assistant-1>> began stocking SPORT section with 2 books
-<860><15>Customer-79 bought a book from romance section.
-<862><15>Customer-83 bought a book from romance section.
-<865><12><<Assistant-0>> began stocking FICTION section with 2 books
-<873><14><<Assistant-2>> collected 10 books from the box: [Crime, Romance, Fantasy, Fantasy, Fiction, Fiction, Sport, Sport, Sport, Sport]
-<873><13><<Assistant-1>> began stocking FANTASY section with 1 books
-<880><16>New Delivery!
-<880><16>Stock Box: [Fantasy, Romance, Fantasy, Horror, Fiction, Horror, Romance, Fantasy, Sport, Fantasy]
-<882><15>Customer-87 bought a book from sport section.
-<888><12><<Assistant-0>> began stocking SPORT section with 5 books
-<889><15>Customer-36 bought a book from horror section.
-<893><13><<Assistant-1>> began stocking HORROR section with 4 books
-<895><14><<Assistant-2>> began stocking FICTION section with 2 books
-<900><15>Customer-89 bought a book from sport section.
-<901><12><<Assistant-0>> began stocking FANTASY section with 1 books
-<906><13><<Assistant-1>> began stocking ROMANCE section with 2 books
-<914><12><<Assistant-0>> began stocking HORROR section with 1 books
-<916><14><<Assistant-2>> began stocking SPORT section with 4 books
-<921><15>Customer-90 bought a book from sport section.
-<922><15>Customer-43 bought a book from fiction section.
-<926><12><<Assistant-0>> began stocking ROMANCE section with 1 books
-<927><13><<Assistant-1>> collected 10 books from the box: [Horror, Horror, Romance, Romance, Fantasy, Fantasy, Fantasy, Fantasy, Fiction, Sport]
-<932><14><<Assistant-2>> began stocking FANTASY section with 2 books
-<937><15>Customer-92 bought a book from sport section.
-<945><14><<Assistant-2>> began stocking CRIME section with 1 books
-<948><13><<Assistant-1>> began stocking FICTION section with 1 books
-<952><15>Customer-93 bought a book from sport section.
-<957><15>Customer-46 bought a book from fantasy section.
-<957><14><<Assistant-2>> began stocking ROMANCE section with 1 books
-<959><15>Customer-66 bought a book from crime section.
-<961><15>Customer-81 bought a book from crime section.
-<966><15>Customer-85 bought a book from romance section.
-<967><13><<Assistant-1>> began stocking SPORT section with 1 books
-<968><15>Customer-47 bought a book from fiction section.
-<980><15>Customer-99 bought a book from sport section.
-<989><13><<Assistant-1>> began stocking FANTASY section with 4 books
-<997><15>Customer-86 bought a book from romance section.
+<375><13><<Assistant-1>> began stocking CRIME section with 3 books
+<380><15>Customer-10 bought a book from romance section.
+<383><15>Customer-19 bought a book from fantasy section.
+<387><13><<Assistant-1>> began stocking ROMANCE section with 3 books
+<393><15>Customer-31 bought a book from sport section.
+<398><15>Customer-24 bought a book from fantasy section.
+<399><15>Customer-33 bought a book from sport section.
+<404><15>Customer-34 bought a book from sport section.
+<420><15>Customer-35 bought a book from sport section.
+<429><16>New Delivery!
+<429><16>Stock Box: [Crime, Fiction, Sport, Crime, Fantasy, Romance, Crime, Sport, Crime, Romance]
+<439><13><<Assistant-1>> collected 10 books from the box: [Crime, Crime, Crime, Crime, Romance, Romance, Fantasy, Fiction, Sport, Sport]
+<447><15>Customer-36 joined the waiting line for sport
+<456><15>Customer-37 joined the waiting line for fantasy
+<457><13><<Assistant-1>> began stocking FICTION section with 1 books
+<461><15>Customer-11 bought a book from romance section.
+<471><15>Customer-8 bought a book from fiction section.
+<477><13><<Assistant-1>> began stocking SPORT section with 2 books
+<485><15>Customer-15 bought a book from horror section.
+<488><16>New Delivery!
+<488><16>Stock Box: [Fantasy, Crime, Fantasy, Horror, Horror, Romance, Fantasy, Crime, Sport, Romance]
+<490><14><<Assistant-2>> is back from break, back to work!
+<490><12><<Assistant-0>> is taking a break.
+<492><13><<Assistant-1>> began stocking FANTASY section with 1 books
+<499><14><<Assistant-2>> collected 10 books from the box: [Fantasy, Fantasy, Fantasy, Crime, Crime, Horror, Horror, Romance, Romance, Sport]
+<500><15>Customer-23 bought a book from crime section.
+<506><15>Customer-26 bought a book from fantasy section.
+<510><13><<Assistant-1>> began stocking CRIME section with 4 books
+<510><15>Customer-12 bought a book from fiction section.
+<515><14><<Assistant-2>> began stocking SPORT section with 1 books
+<522><13><<Assistant-1>> began stocking ROMANCE section with 2 books
+<535><15>Customer-25 bought a book from romance section.
+<535><14><<Assistant-2>> began stocking FANTASY section with 3 books
+<551><14><<Assistant-2>> began stocking HORROR section with 2 books
+<559><15>Customer-20 bought a book from fiction section.
+<565><15>Customer-30 bought a book from fantasy section.
+<566><14><<Assistant-2>> began stocking CRIME section with 2 books
+<566><15>Customer-32 bought a book from fantasy section.
+<569><15>Customer-29 bought a book from romance section.
+<572><15>Customer-38 bought a book from romance section.
+<576><15>Customer-53 joined the waiting line for fiction
+<578><14><<Assistant-2>> began stocking ROMANCE section with 2 books
+<600><15>Customer-54 joined the waiting line for fiction
+<608><15>Customer-42 bought a book from crime section.
+<611><12><<Assistant-0>> is back from break, back to work!
+<614><15>Customer-47 bought a book from romance section.
+<617><15>Customer-51 bought a book from romance section.
+<620><15>Customer-37 bought a book from fantasy section.
+<622><15>Customer-56 bought a book from crime section.
+<629><15>Customer-61 joined the waiting line for fantasy
+<654><15>Customer-63 joined the waiting line for fantasy
+<672><15>Customer-60 bought a book from crime section.
+<677><15>Customer-52 bought a book from romance section.
+<701><15>Customer-68 joined the waiting line for fiction
+<725><15>Customer-16 bought a book from horror section.
+<733><15>Customer-40 bought a book from horror section.
+<761><16>New Delivery!
+<761><16>Stock Box: [Crime, Crime, Sport, Crime, Fiction, Horror, Romance, Crime, Fiction, Fiction]
+<772><14><<Assistant-2>> collected 10 books from the box: [Crime, Crime, Crime, Crime, Horror, Romance, Fiction, Fiction, Fiction, Sport]
+<782><15>Customer-73 joined the waiting line for fantasy
+<793><14><<Assistant-2>> began stocking FICTION section with 3 books
+<800><15>Customer-70 bought a book from horror section.
+<802><15>Customer-75 joined the waiting line for fantasy
+<809><14><<Assistant-2>> began stocking SPORT section with 1 books
+<809><15>Customer-57 bought a book from romance section.
+<814><15>Customer-21 bought a book from fiction section.
+<824><14><<Assistant-2>> began stocking HORROR section with 1 books
+<843><14><<Assistant-2>> began stocking CRIME section with 4 books
+<853><14><<Assistant-2>> began stocking ROMANCE section with 1 books
+<854><13><<Assistant-1>> is taking a break.
+<871><16>New Delivery!
+<871><16>Stock Box: [Fiction, Sport, Fantasy, Sport, Horror, Fantasy, Fiction, Crime, Horror, Romance]
+<878><15>Customer-39 bought a book from fiction section.
+<882><12><<Assistant-0>> collected 10 books from the box: [Crime, Romance, Fantasy, Fantasy, Fiction, Fiction, Horror, Horror, Sport, Sport]
+<888><15>Customer-58 bought a book from romance section.
+<899><15>Customer-82 joined the waiting line for fantasy
+<902><12><<Assistant-0>> began stocking FICTION section with 2 books
+<913><15>Customer-65 bought a book from crime section.
+<918><12><<Assistant-0>> began stocking SPORT section with 2 books
+<936><12><<Assistant-0>> began stocking FANTASY section with 2 books
+<937><15>Customer-84 bought a book from crime section.
+<945><16>New Delivery!
+<945><16>Stock Box: [Horror, Fiction, Fiction, Romance, Fantasy, Fantasy, Sport, Sport, Crime, Sport]
+<949><12><<Assistant-0>> began stocking HORROR section with 2 books
+<952><16>New Delivery!
+<952><16>Stock Box: [Horror, Fiction, Fiction, Romance, Fantasy, Fantasy, Sport, Sport, Crime, Sport, Crime, Fiction, Crime, Romance, Fantasy, Crime, Fantasy, Crime, Horror, Fiction]
+<955><14><<Assistant-2>> collected 10 books from the box: [Fantasy, Fantasy, Crime, Horror, Romance, Fiction, Fiction, Sport, Sport, Sport]
+<960><12><<Assistant-0>> began stocking CRIME section with 1 books
+<963><15>Customer-46 bought a book from fiction section.
+<971><12><<Assistant-0>> began stocking ROMANCE section with 1 books
+<974><14><<Assistant-2>> began stocking FICTION section with 2 books
+<975><15>Customer-48 bought a book from fiction section.
+<978><13><<Assistant-1>> is back from break, back to work!
+<978><15>Customer-53 bought a book from fiction section.
+<981><15>Customer-71 bought a book from horror section.
+<988><13><<Assistant-1>> collected 10 books from the box: [Crime, Crime, Crime, Crime, Horror, Romance, Fantasy, Fantasy, Fiction, Fiction]
+<990><15>Customer-54 bought a book from fiction section.
+<993><14><<Assistant-2>> began stocking SPORT section with 3 books
+<993><15>Customer-85 bought a book from crime section.
 End of day stats: 
-<1000><15>Customer-97 bought a book from romance section.
-Total Customers: 100
-Customers Served: 70
-Deliveries: 11
-Average wait time: 167
-<1002><16>New Delivery!
-<1002><16>Stock Box: [Romance, Crime, Fantasy, Fantasy, Horror, Fiction, Romance, Romance, Sport, Crime]
+Total Customers: 92
+Customers Served: 56
+Deliveries: 10
+Average wait time: 173
 <1003><16>New Delivery!
-<1003><16>Stock Box: [Romance, Crime, Fantasy, Fantasy, Horror, Fiction, Romance, Romance, Sport, Crime, Horror, Fiction, Fantasy, Romance, Horror, Sport, Sport, Fantasy, Fiction, Horror]
-<1005><13><<Assistant-1>> began stocking HORROR section with 2 books
-<1013><12><<Assistant-0>> collected 10 books from the box: [Horror, Romance, Romance, Romance, Fantasy, Fantasy, Crime, Crime, Fiction, Sport]
-<1019><13><<Assistant-1>> began stocking ROMANCE section with 2 books
-<1030><15>Customer-100 bought a book from romance section.
-<1031><15>Customer-103 bought a book from sport section.
-<1033><12><<Assistant-0>> began stocking FICTION section with 1 books
-<1042><14><<Assistant-2>> collected 10 books from the box: [Horror, Horror, Horror, Romance, Fantasy, Fantasy, Fiction, Fiction, Sport, Sport]
-<1042><15>Customer-39 bought a book from horror section.
-<1053><12><<Assistant-0>> began stocking SPORT section with 1 books
-<1061><15>Customer-53 bought a book from fiction section.
-<1064><14><<Assistant-2>> began stocking FICTION section with 2 books
-<1069><15>Customer-95 bought a book from crime section.
-<1073><12><<Assistant-0>> began stocking FANTASY section with 2 books
-<1084><14><<Assistant-2>> began stocking SPORT section with 2 books
-<1090><12><<Assistant-0>> began stocking HORROR section with 1 books
-<1096><15>Customer-63 bought a book from fiction section.
-<1101><14><<Assistant-2>> began stocking FANTASY section with 2 books
-<1106><12><<Assistant-0>> began stocking CRIME section with 2 books
-<1107><15>Customer-48 bought a book from fantasy section.
-<1118><14><<Assistant-2>> began stocking HORROR section with 3 books
-<1122><15>Customer-49 bought a book from fantasy section.
-<1122><12><<Assistant-0>> began stocking ROMANCE section with 3 books
-<1128><15>Customer-45 bought a book from horror section.
-<1129><15>Customer-55 bought a book from fantasy section.
-<1130><14><<Assistant-2>> began stocking ROMANCE section with 1 books
-<1136><15>Customer-96 bought a book from crime section.
-<1143><15>Customer-57 bought a book from fantasy section.
-<1150><15>Customer-65 bought a book from fiction section.
-<1171><15>Customer-101 bought a book from romance section.
-<1178><15>Customer-59 bought a book from fantasy section.
-<1197><15>Customer-102 bought a book from romance section.
-<1198><15>Customer-118 bought a book from sport section.
-<1215><15>Customer-68 bought a book from fantasy section.
-<1219><15>Customer-70 bought a book from fantasy section.
-<1240><14><<Assistant-2>> is taking a break.
-<1255><15>Customer-50 bought a book from horror section.
-<1256><15>Customer-122 bought a book from sport section.
-<1269><15>Customer-71 bought a book from fantasy section.
-<1273><15>Customer-72 bought a book from fiction section.
-<1273><15>Customer-115 bought a book from romance section.
-<1279><15>Customer-126 bought a book from sport section.
-<1297><15>Customer-64 bought a book from horror section.
-<1302><15>Customer-117 bought a book from romance section.
-<1308><16>New Delivery!
-<1308><16>Stock Box: [Horror, Sport, Horror, Romance, Sport, Romance, Crime, Sport, Fantasy, Romance]
-<1319><13><<Assistant-1>> collected 10 books from the box: [Horror, Horror, Romance, Romance, Romance, Fantasy, Crime, Sport, Sport, Sport]
-<1333><15>Customer-129 bought a book from sport section.
-<1335><15>Customer-130 bought a book from sport section.
-<1341><13><<Assistant-1>> began stocking SPORT section with 3 books
-<1346><15>Customer-76 bought a book from horror section.
-<1359><13><<Assistant-1>> began stocking FANTASY section with 1 books
-<1361><15>Customer-73 bought a book from fiction section.
-<1362><15>Customer-78 bought a book from fantasy section.
-<1368><15>Customer-80 bought a book from fiction section.
-<1377><13><<Assistant-1>> began stocking HORROR section with 2 books
-<1382><16>New Delivery!
-<1382><16>Stock Box: [Romance, Romance, Fantasy, Romance, Horror, Crime, Fiction, Fantasy, Sport, Horror]
-<1387><14><<Assistant-2>> is back from break, back to work!
-<1387><12><<Assistant-0>> is taking a break.
-<1388><15>Customer-94 bought a book from fantasy section.
-<1392><13><<Assistant-1>> began stocking CRIME section with 1 books
+<1003><16>Stock Box: [Romance, Romance, Crime, Crime, Sport, Fantasy, Fantasy, Crime, Fiction, Horror]
+<1006><13><<Assistant-1>> began stocking FICTION section with 2 books
+<1007><14><<Assistant-2>> began stocking FANTASY section with 2 books
+<1014><15>Customer-92 bought a book from crime section.
+<1014><12><<Assistant-0>> collected 10 books from the box: [Crime, Crime, Crime, Romance, Romance, Fantasy, Fantasy, Fiction, Horror, Sport]
+<1021><14><<Assistant-2>> began stocking HORROR section with 1 books
+<1026><13><<Assistant-1>> began stocking FANTASY section with 2 books
+<1034><14><<Assistant-2>> began stocking CRIME section with 1 books
+<1034><12><<Assistant-0>> began stocking FICTION section with 1 books
+<1041><13><<Assistant-1>> began stocking HORROR section with 1 books
+<1044><14><<Assistant-2>> began stocking ROMANCE section with 1 books
+<1046><15>Customer-68 bought a book from fiction section.
+<1052><12><<Assistant-0>> began stocking SPORT section with 1 books
+<1057><13><<Assistant-1>> began stocking CRIME section with 4 books
+<1063><15>Customer-44 bought a book from fantasy section.
+<1069><13><<Assistant-1>> began stocking ROMANCE section with 1 books
+<1071><12><<Assistant-0>> began stocking FANTASY section with 2 books
+<1079><15>Customer-66 bought a book from romance section.
+<1085><12><<Assistant-0>> began stocking HORROR section with 1 books
+<1101><12><<Assistant-0>> began stocking CRIME section with 3 books
+<1114><12><<Assistant-0>> began stocking ROMANCE section with 2 books
+<1116><15>Customer-76 bought a book from romance section.
+<1120><15>Customer-93 bought a book from crime section.
+<1134><15>Customer-77 bought a book from fiction section.
+<1135><16>New Delivery!
+<1135><16>Stock Box: [Sport, Horror, Crime, Crime, Fantasy, Horror, Sport, Fiction, Fiction, Sport]
+<1141><15>Customer-80 bought a book from fiction section.
+<1143><15>Customer-74 bought a book from horror section.
+<1146><13><<Assistant-1>> collected 10 books from the box: [Crime, Crime, Horror, Horror, Fantasy, Fiction, Fiction, Sport, Sport, Sport]
+<1149><15>Customer-81 bought a book from romance section.
+<1159><15>Customer-100 bought a book from crime section.
+<1165><15>Customer-90 bought a book from horror section.
+<1168><15>Customer-104 bought a book from horror section.
+<1168><13><<Assistant-1>> began stocking FICTION section with 2 books
+<1169><15>Customer-87 bought a book from fiction section.
+<1174><15>Customer-96 bought a book from romance section.
+<1176><15>Customer-49 bought a book from fantasy section.
+<1186><13><<Assistant-1>> began stocking SPORT section with 3 books
+<1187><15>Customer-107 bought a book from horror section.
+<1202><13><<Assistant-1>> began stocking FANTASY section with 1 books
+<1214><15>Customer-50 bought a book from fantasy section.
+<1217><13><<Assistant-1>> began stocking HORROR section with 2 books
+<1219><15>Customer-59 bought a book from fantasy section.
+<1226><15>Customer-106 bought a book from crime section.
+<1230><13><<Assistant-1>> began stocking CRIME section with 2 books
+<1244><15>Customer-88 bought a book from fiction section.
+<1247><15>Customer-89 bought a book from fiction section.
+<1256><15>Customer-99 bought a book from romance section.
+<1268><16>New Delivery!
+<1268><16>Stock Box: [Horror, Fiction, Romance, Fiction, Fiction, Fiction, Horror, Romance, Fantasy, Fantasy]
+<1271><15>Customer-105 bought a book from romance section.
+<1278><12><<Assistant-0>> collected 10 books from the box: [Romance, Romance, Fantasy, Fantasy, Fiction, Fiction, Fiction, Fiction, Horror, Horror]
+<1290><15>Customer-121 joined the waiting line for fiction
+<1299><12><<Assistant-0>> began stocking FICTION section with 4 books
+<1299><15>Customer-61 bought a book from fantasy section.
+<1301><15>Customer-63 bought a book from fantasy section.
+<1311><15>Customer-115 bought a book from crime section.
+<1315><12><<Assistant-0>> began stocking FANTASY section with 2 books
+<1329><12><<Assistant-0>> began stocking HORROR section with 2 books
+<1331><15>Customer-125 joined the waiting line for romance
+<1332><15>Customer-91 bought a book from fiction section.
+<1339><15>Customer-127 joined the waiting line for romance
+<1342><12><<Assistant-0>> began stocking ROMANCE section with 2 books
+<1342><15>Customer-73 bought a book from fantasy section.
+<1350><15>Customer-108 bought a book from horror section.
+<1360><15>Customer-112 bought a book from horror section.
+<1366><15>Customer-110 bought a book from romance section.
+<1370><16>New Delivery!
+<1370><16>Stock Box: [Crime, Horror, Horror, Sport, Romance, Crime, Fantasy, Fiction, Romance, Fantasy]
+<1380><14><<Assistant-2>> collected 10 books from the box: [Fantasy, Fantasy, Crime, Crime, Horror, Horror, Romance, Romance, Fiction, Sport]
+<1390><15>Customer-124 bought a book from crime section.
+<1397><14><<Assistant-2>> began stocking FICTION section with 1 books
+<1406><15>Customer-94 bought a book from fiction section.
+<1414><14><<Assistant-2>> began stocking SPORT section with 1 books
+<1418><15>Customer-118 bought a book from romance section.
+<1425><15>Customer-101 bought a book from fiction section.
+<1431><14><<Assistant-2>> began stocking FANTASY section with 2 books
+<1431><15>Customer-103 bought a book from fiction section.
+<1432><15>Customer-129 bought a book from horror section.
+<1435><15>Customer-109 bought a book from fiction section.
+<1437><15>Customer-75 bought a book from fantasy section.
+<1447><14><<Assistant-2>> began stocking HORROR section with 2 books
+<1450><15>Customer-132 bought a book from crime section.
+<1455><15>Customer-82 bought a book from fantasy section.
+<1462><14><<Assistant-2>> began stocking CRIME section with 2 books
+<1466><15>Customer-140 bought a book from crime section.
+<1467><15>Customer-95 bought a book from fantasy section.
+<1467><15>Customer-111 bought a book from fantasy section.
+<1468><15>Customer-145 joined the waiting line for fiction
+<1474><14><<Assistant-2>> began stocking ROMANCE section with 2 books
+<1480><15>Customer-147 joined the waiting line for fiction
+<1496><15>Customer-113 bought a book from fantasy section.
+<1503><15>Customer-142 bought a book from crime section.
+<1506><13><<Assistant-1>> is taking a break.
+<1508><15>Customer-120 bought a book from romance section.
+<1512><15>Customer-114 bought a book from fantasy section.
+<1539><15>Customer-153 joined the waiting line for fantasy
+<1549><15>Customer-130 bought a book from horror section.
+<1556><15>Customer-149 bought a book from crime section.
+<1576><15>Customer-137 bought a book from horror section.
+<1579><15>Customer-155 bought a book from crime section.
+<1588><16>New Delivery!
+<1588><16>Stock Box: [Romance, Sport, Fantasy, Horror, Fantasy, Fantasy, Crime, Fiction, Sport, Romance]
+<1598><15>Customer-154 bought a book from horror section.
+<1603><15>Customer-159 joined the waiting line for fiction
+<1605><15>Customer-160 joined the waiting line for fantasy
+<1610><15>Customer-156 bought a book from horror section.
+<1623><15>Customer-157 bought a book from crime section.
+<1626><15>Customer-163 joined the waiting line for fantasy
+<1627><15>Customer-125 bought a book from romance section.
+<1628><13><<Assistant-1>> is back from break, back to work!
+<1628><14><<Assistant-2>> is taking a break.
+<1638><13><<Assistant-1>> collected 10 books from the box: [Crime, Horror, Romance, Romance, Fantasy, Fantasy, Fantasy, Fiction, Sport, Sport]
+<1643><15>Customer-162 bought a book from crime section.
+<1648><15>Customer-166 joined the waiting line for fiction
+<1655><15>Customer-167 joined the waiting line for romance
+<1655><13><<Assistant-1>> began stocking FICTION section with 1 books
+<1669><15>Customer-170 joined the waiting line for fantasy
+<1672><15>Customer-171 joined the waiting line for fantasy
+<1673><13><<Assistant-1>> began stocking SPORT section with 2 books
+<1683><15>Customer-158 bought a book from horror section.
+<1690><13><<Assistant-1>> began stocking FANTASY section with 3 books
+<1705><13><<Assistant-1>> began stocking HORROR section with 1 books
+<1707><15>Customer-116 bought a book from fiction section.
+<1713><15>Customer-161 bought a book from horror section.
+<1718><13><<Assistant-1>> began stocking CRIME section with 1 books
+<1718><15>Customer-172 bought a book from horror section.
+<1730><13><<Assistant-1>> began stocking ROMANCE section with 2 books
+<1737><15>Customer-127 bought a book from romance section.
+<1742><14><<Assistant-2>> is back from break, back to work!
+<1743><12><<Assistant-0>> is taking a break.
+<1748><15>Customer-177 joined the waiting line for fiction
+<1759><15>Customer-122 bought a book from fantasy section.
+<1763><15>Customer-131 bought a book from romance section.
+<1764><15>Customer-123 bought a book from fantasy section.
+<1769><15>Customer-165 bought a book from crime section.
+<1789><15>Customer-184 joined the waiting line for fiction
+<1819><15>Customer-128 bought a book from fantasy section.
+<1827><15>Customer-182 bought a book from crime section.
+<1830><15>Customer-187 joined the waiting line for fantasy
+<1834><15>Customer-188 joined the waiting line for fiction
+<1838><15>Customer-189 joined the waiting line for fantasy
+<1838><15>Customer-190 joined the waiting line for fantasy
+<1860><15>Customer-192 joined the waiting line for fiction
+<1863><12><<Assistant-0>> is back from break, back to work!
+<1870><15>Customer-194 joined the waiting line for romance
+<1873><15>Customer-186 bought a book from crime section.
+<1876><15>Customer-195 bought a book from crime section.
+<1877><15>Customer-197 joined the waiting line for fantasy
+<1891><16>New Delivery!
+<1891><16>Stock Box: [Horror, Horror, Fiction, Romance, Sport, Horror, Horror, Romance, Crime, Romance]
+<1897><15>Customer-196 bought a book from crime section.
+<1900><15>Customer-199 joined the waiting line for fiction
+<1901><14><<Assistant-2>> collected 10 books from the box: [Crime, Horror, Horror, Horror, Horror, Romance, Romance, Romance, Fiction, Sport]
+<1911><16>New Delivery!
+<1911><16>Stock Box: [Crime, Sport, Horror, Romance, Fantasy, Crime, Fantasy, Romance, Romance, Fiction]
+<1918><14><<Assistant-2>> began stocking FICTION section with 1 books
+<1921><15>Customer-198 bought a book from crime section.
+<1926><12><<Assistant-0>> collected 10 books from the box: [Crime, Crime, Romance, Romance, Romance, Fantasy, Fantasy, Fiction, Horror, Sport]
+<1934><14><<Assistant-2>> began stocking SPORT section with 1 books
+<1942><15>Customer-200 bought a book from crime section.
+<1944><12><<Assistant-0>> began stocking FICTION section with 1 books
+<1951><15>Customer-174 bought a book from horror section.
+<1954><14><<Assistant-2>> began stocking HORROR section with 4 books
+<1958><15>Customer-203 joined the waiting line for fantasy
+<1960><12><<Assistant-0>> began stocking SPORT section with 1 books
+<1965><15>Customer-175 bought a book from horror section.
+<1967><14><<Assistant-2>> began stocking CRIME section with 1 books
+<1968><15>Customer-205 joined the waiting line for fantasy
+<1978><12><<Assistant-0>> began stocking FANTASY section with 2 books
+<1980><14><<Assistant-2>> began stocking ROMANCE section with 3 books
+<1981><15>Customer-134 bought a book from romance section.
+<1991><12><<Assistant-0>> began stocking HORROR section with 1 books
+End of day stats: 
+Total Customers: 116
+Customers Served: 78
+Deliveries: 7
+Average wait time: 240
+<2000><15>Customer-139 bought a book from fantasy section.
+<2006><12><<Assistant-0>> began stocking CRIME section with 2 books
+<2021><12><<Assistant-0>> began stocking ROMANCE section with 3 books
+<2022><15>Customer-150 bought a book from romance section.
+<2026><15>Customer-141 bought a book from fantasy section.
+<2049><15>Customer-201 bought a book from crime section.
+<2052><13><<Assistant-1>> is taking a break.
+<2057><15>Customer-117 bought a book from fiction section.
+<2069><15>Customer-213 joined the waiting line for fantasy
+<2073><15>Customer-214 joined the waiting line for fantasy
+<2085><15>Customer-164 bought a book from romance section.
+<2103><15>Customer-167 bought a book from romance section.
+<2109><15>Customer-121 bought a book from fiction section.
+<2110><15>Customer-211 bought a book from crime section.
+<2111><15>Customer-218 bought a book from crime section.
+<2125><15>Customer-219 bought a book from crime section.
+<2130><15>Customer-221 joined the waiting line for fantasy
+<2136><15>Customer-202 bought a book from horror section.
+<2149><15>Customer-223 joined the waiting line for fiction
+<2164><15>Customer-204 bought a book from horror section.
+<2165><15>Customer-225 joined the waiting line for fantasy
+<2172><13><<Assistant-1>> is back from break, back to work!
+<2172><14><<Assistant-2>> is taking a break.
+<2173><15>Customer-226 joined the waiting line for fiction
+<2174><16>New Delivery!
+<2174><16>Stock Box: [Romance, Horror, Sport, Fiction, Fantasy, Horror, Horror, Sport, Horror, Crime]
+<2180><15>Customer-227 joined the waiting line for crime
+<2185><12><<Assistant-0>> collected 10 books from the box: [Crime, Romance, Fantasy, Fiction, Horror, Horror, Horror, Horror, Sport, Sport]
+<2203><12><<Assistant-0>> began stocking FICTION section with 1 books
+<2212><15>Customer-176 bought a book from romance section.
+<2221><12><<Assistant-0>> began stocking SPORT section with 2 books
+<2222><15>Customer-126 bought a book from fiction section.
+<2227><15>Customer-180 bought a book from romance section.
+<2236><12><<Assistant-0>> began stocking FANTASY section with 1 books
+<2243><15>Customer-222 bought a book from horror section.
+<2253><12><<Assistant-0>> began stocking HORROR section with 4 books
+<2259><15>Customer-224 bought a book from horror section.
+<2261><16>New Delivery!
+<2261><16>Stock Box: [Fiction, Romance, Horror, Horror, Horror, Fiction, Crime, Fiction, Sport, Sport]
+<2265><12><<Assistant-0>> began stocking CRIME section with 1 books
+<2265><15>Customer-143 bought a book from fantasy section.
+<2271><13><<Assistant-1>> collected 10 books from the box: [Crime, Horror, Horror, Horror, Romance, Fiction, Fiction, Fiction, Sport, Sport]
+<2275><12><<Assistant-0>> began stocking ROMANCE section with 1 books
+<2290><15>Customer-235 joined the waiting line for fantasy
+<2292><13><<Assistant-1>> began stocking FICTION section with 3 books
+<2293><14><<Assistant-2>> is back from break, back to work!
+<2308><13><<Assistant-1>> began stocking SPORT section with 2 books
+<2324><15>Customer-238 joined the waiting line for fantasy
+<2324><13><<Assistant-1>> began stocking HORROR section with 3 books
+<2335><13><<Assistant-1>> began stocking CRIME section with 1 books
+<2339><15>Customer-133 bought a book from fiction section.
+<2347><13><<Assistant-1>> began stocking ROMANCE section with 1 books
+<2369><15>Customer-135 bought a book from fiction section.
+<2406><16>New Delivery!
+<2406><16>Stock Box: [Fiction, Fiction, Romance, Horror, Romance, Sport, Romance, Fantasy, Fantasy, Crime]
+<2417><14><<Assistant-2>> collected 10 books from the box: [Fantasy, Fantasy, Crime, Horror, Romance, Romance, Romance, Fiction, Fiction, Sport]
+<2426><15>Customer-231 bought a book from horror section.
+<2431><15>Customer-194 bought a book from romance section.
+<2436><15>Customer-136 bought a book from fiction section.
+<2438><14><<Assistant-2>> began stocking FICTION section with 2 books
+<2448><15>Customer-206 bought a book from romance section.
+<2448><15>Customer-246 joined the waiting line for romance
+<2451><15>Customer-138 bought a book from fiction section.
+<2455><14><<Assistant-2>> began stocking SPORT section with 1 books
+<2459><15>Customer-248 joined the waiting line for romance
+<2472><14><<Assistant-2>> began stocking FANTASY section with 2 books
+<2483><15>Customer-249 joined the waiting line for romance
+<2486><14><<Assistant-2>> began stocking HORROR section with 1 books
+<2486><15>Customer-220 bought a book from crime section.
+<2489><15>Customer-144 bought a book from fantasy section.
+<2496><15>Customer-232 bought a book from horror section.
+<2499><14><<Assistant-2>> began stocking CRIME section with 1 books
+<2500><15>Customer-242 bought a book from horror section.
+<2512><14><<Assistant-2>> began stocking ROMANCE section with 3 books
+<2523><15>Customer-145 bought a book from fiction section.
+<2529><15>Customer-252 bought a book from horror section.
+<2531><15>Customer-256 joined the waiting line for fiction
+<2545><16>New Delivery!
+<2545><16>Stock Box: [Fiction, Horror, Fiction, Fiction, Crime, Horror, Fiction, Horror, Sport, Sport]
+<2555><14><<Assistant-2>> collected 10 books from the box: [Crime, Horror, Horror, Horror, Fiction, Fiction, Fiction, Fiction, Sport, Sport]
+<2572><15>Customer-147 bought a book from fiction section.
+<2573><15>Customer-227 bought a book from crime section.
+<2575><15>Customer-159 bought a book from fiction section.
+<2575><14><<Assistant-2>> began stocking FICTION section with 4 books
+<2581><16>New Delivery!
+<2581><16>Stock Box: [Crime, Sport, Sport, Romance, Fiction, Horror, Fiction, Sport, Fiction, Romance]
+<2587><15>Customer-148 bought a book from fantasy section.
+<2591><14><<Assistant-2>> began stocking SPORT section with 2 books
+<2592><13><<Assistant-1>> collected 10 books from the box: [Crime, Horror, Romance, Romance, Fiction, Fiction, Fiction, Sport, Sport, Sport]
+<2607><14><<Assistant-2>> began stocking HORROR section with 3 books
+<2611><13><<Assistant-1>> began stocking FICTION section with 3 books
+<2618><14><<Assistant-2>> began stocking CRIME section with 1 books
+<2621><15>Customer-250 bought a book from crime section.
+<2630><13><<Assistant-1>> began stocking SPORT section with 3 books
+<2635><15>Customer-259 bought a book from crime section.
+<2644><13><<Assistant-1>> began stocking HORROR section with 1 books
+<2657><13><<Assistant-1>> began stocking CRIME section with 1 books
+<2670><13><<Assistant-1>> began stocking ROMANCE section with 2 books
+<2677><15>Customer-262 bought a book from crime section.
+<2683><15>Customer-166 bought a book from fiction section.
+<2698><15>Customer-173 bought a book from fiction section.
+<2702><13><<Assistant-1>> is taking a break.
+<2706><15>Customer-268 joined the waiting line for fantasy
+<2709><15>Customer-209 bought a book from romance section.
+<2719><15>Customer-177 bought a book from fiction section.
+<2735><15>Customer-271 joined the waiting line for fantasy
+<2737><15>Customer-272 joined the waiting line for crime
+<2771><15>Customer-253 bought a book from horror section.
+<2805><15>Customer-275 joined the waiting line for fantasy
+<2813><15>Customer-184 bought a book from fiction section.
+<2818><15>Customer-277 joined the waiting line for crime
+<2822><15>Customer-188 bought a book from fiction section.
+<2822><12><<Assistant-0>> is taking a break.
+<2822><13><<Assistant-1>> is back from break, back to work!
+<2829><15>Customer-279 joined the waiting line for crime
+<2864><16>New Delivery!
+<2864><16>Stock Box: [Fiction, Fiction, Sport, Fiction, Fantasy, Romance, Fantasy, Fantasy, Crime, Sport]
+<2874><13><<Assistant-1>> collected 10 books from the box: [Crime, Romance, Fantasy, Fantasy, Fantasy, Fiction, Fiction, Fiction, Sport, Sport]
+<2885><15>Customer-215 bought a book from romance section.
+<2893><13><<Assistant-1>> began stocking FICTION section with 3 books
+<2909><13><<Assistant-1>> began stocking SPORT section with 2 books
+<2925><15>Customer-281 joined the waiting line for crime
+<2925><13><<Assistant-1>> began stocking FANTASY section with 3 books
+<2932><15>Customer-216 bought a book from romance section.
+<2936><13><<Assistant-1>> began stocking CRIME section with 1 books
+<2940><15>Customer-263 bought a book from crime section.
+<2941><12><<Assistant-0>> is back from break, back to work!
+<2941><14><<Assistant-2>> is taking a break.
+<2948><13><<Assistant-1>> began stocking ROMANCE section with 1 books
+<2981><15>Customer-151 bought a book from fantasy section.
+<2985><15>Customer-285 joined the waiting line for crime
+<2994><15>Customer-192 bought a book from fiction section.
+<2997><15>Customer-288 joined the waiting line for crime
+End of day stats: 
+Total Customers: 80
+Customers Served: 50
+Deliveries: 6
+Average wait time: 584
+<3002><15>Customer-153 bought a book from fantasy section.
+<3018><15>Customer-228 bought a book from romance section.
+<3021><15>Customer-160 bought a book from fantasy section.
+<3034><15>Customer-255 bought a book from horror section.
+<3036><15>Customer-294 joined the waiting line for fantasy
+<3058><15>Customer-199 bought a book from fiction section.
+<3062><14><<Assistant-2>> is back from break, back to work!
+<3131><16>New Delivery!
+<3131><16>Stock Box: [Romance, Fantasy, Horror, Romance, Fiction, Crime, Crime, Romance, Fiction, Crime]
+<3137><15>Customer-297 joined the waiting line for fantasy
+<3142><14><<Assistant-2>> collected 10 books from the box: [Fantasy, Crime, Crime, Crime, Horror, Romance, Romance, Romance, Fiction, Fiction]
+<3148><15>Customer-230 bought a book from romance section.
+<3149><15>Customer-299 joined the waiting line for crime
+<3155><15>Customer-274 bought a book from horror section.
+<3158><15>Customer-212 bought a book from fiction section.
+<3160><15>Customer-302 joined the waiting line for fantasy
+<3162><14><<Assistant-2>> began stocking FICTION section with 2 books
+<3162><15>Customer-243 bought a book from romance section.
+<3165><15>Customer-304 joined the waiting line for romance
+<3172><15>Customer-293 bought a book from horror section.
+<3173><13><<Assistant-1>> is taking a break.
+<3179><14><<Assistant-2>> began stocking FANTASY section with 1 books
+<3179><16>New Delivery!
+<3179><16>Stock Box: [Fantasy, Fantasy, Horror, Fantasy, Horror, Fantasy, Fiction, Fiction, Fiction, Horror]
+<3184><15>Customer-307 joined the waiting line for romance
+<3189><12><<Assistant-0>> collected 10 books from the box: [Fantasy, Fantasy, Fantasy, Fantasy, Fiction, Fiction, Fiction, Horror, Horror, Horror]
+<3195><14><<Assistant-2>> began stocking HORROR section with 1 books
+<3210><12><<Assistant-0>> began stocking FICTION section with 3 books
+<3212><14><<Assistant-2>> began stocking CRIME section with 3 books
+<3215><15>Customer-163 bought a book from fantasy section.
+<3225><14><<Assistant-2>> began stocking ROMANCE section with 3 books
+<3227><12><<Assistant-0>> began stocking FANTASY section with 4 books
+<3243><12><<Assistant-0>> began stocking HORROR section with 3 books
+<3250><15>Customer-217 bought a book from fiction section.
+<3269><15>Customer-223 bought a book from fiction section.
+<3274><15>Customer-265 bought a book from crime section.
+<3297><13><<Assistant-1>> is back from break, back to work!
+<3297><12><<Assistant-0>> is taking a break.
+<3300><15>Customer-170 bought a book from fantasy section.
+<3304><15>Customer-171 bought a book from fantasy section.
+<3311><15>Customer-245 bought a book from romance section.
+<3322><15>Customer-246 bought a book from romance section.
+<3328><15>Customer-226 bought a book from fiction section.
+<3336><15>Customer-248 bought a book from romance section.
+<3338><15>Customer-272 bought a book from crime section.
+<3356><15>Customer-229 bought a book from fiction section.
+<3360><15>Customer-277 bought a book from crime section.
+<3401><15>Customer-239 bought a book from fiction section.
+<3410><15>Customer-326 joined the waiting line for crime
+<3410><12><<Assistant-0>> is back from break, back to work!
+<3414><15>Customer-327 joined the waiting line for crime
+<3424><15>Customer-328 joined the waiting line for fiction
+<3442><15>Customer-329 joined the waiting line for crime
+<3443><15>Customer-330 joined the waiting line for romance
+<3453><15>Customer-331 joined the waiting line for fiction
+<3470><15>Customer-300 bought a book from horror section.
+<3480><15>Customer-333 joined the waiting line for romance
+<3490><15>Customer-334 joined the waiting line for fiction
+<3499><16>New Delivery!
+<3499><16>Stock Box: [Romance, Crime, Sport, Romance, Horror, Fiction, Horror, Romance, Sport, Crime]
+<3505><15>Customer-336 joined the waiting line for crime
+<3510><12><<Assistant-0>> collected 10 books from the box: [Crime, Crime, Romance, Romance, Romance, Fiction, Horror, Horror, Sport, Sport]
+<3529><12><<Assistant-0>> began stocking FICTION section with 1 books
+<3531><16>New Delivery!
+<3531><16>Stock Box: [Horror, Fantasy, Crime, Crime, Crime, Horror, Fiction, Fantasy, Fantasy, Fiction]
+<3540><13><<Assistant-1>> collected 10 books from the box: [Crime, Crime, Crime, Horror, Horror, Fantasy, Fantasy, Fantasy, Fiction, Fiction]
+<3546><15>Customer-179 bought a book from fantasy section.
+<3548><12><<Assistant-0>> began stocking SPORT section with 2 books
+<3557><15>Customer-338 joined the waiting line for romance
+<3560><13><<Assistant-1>> began stocking FICTION section with 2 books
+<3565><12><<Assistant-0>> began stocking HORROR section with 2 books
+<3575><15>Customer-181 bought a book from fantasy section.
+<3579><13><<Assistant-1>> began stocking FANTASY section with 3 books
+<3580><12><<Assistant-0>> began stocking CRIME section with 2 books
+<3581><15>Customer-279 bought a book from crime section.
+<3588><15>Customer-281 bought a book from crime section.
+<3595><12><<Assistant-0>> began stocking ROMANCE section with 3 books
+<3596><13><<Assistant-1>> began stocking HORROR section with 2 books
+<3603><15>Customer-240 bought a book from fiction section.
+<3604><15>Customer-185 bought a book from fantasy section.
+<3608><15>Customer-187 bought a book from fantasy section.
+<3611><13><<Assistant-1>> began stocking CRIME section with 3 books
+<3612><15>Customer-283 bought a book from crime section.
+<3618><15>Customer-305 bought a book from horror section.
+<3657><15>Customer-249 bought a book from romance section.
+<3661><15>Customer-189 bought a book from fantasy section.
+<3665><15>Customer-244 bought a book from fiction section.
+<3668><15>Customer-285 bought a book from crime section.
+<3670><15>Customer-353 joined the waiting line for fantasy
+<3673><15>Customer-288 bought a book from crime section.
+<3678><15>Customer-355 joined the waiting line for crime
+<3681><13><<Assistant-1>> is taking a break.
+<3685><15>Customer-356 joined the waiting line for crime
+<3694><15>Customer-357 joined the waiting line for fantasy
+<3695><15>Customer-358 joined the waiting line for crime
+<3720><15>Customer-332 bought a book from horror section.
+<3721><16>New Delivery!
+<3721><16>Stock Box: [Fantasy, Horror, Crime, Fantasy, Sport, Fantasy, Fiction, Fiction, Fantasy, Fantasy]
+<3724><15>Customer-269 bought a book from romance section.
+<3732><12><<Assistant-0>> collected 10 books from the box: [Crime, Fantasy, Fantasy, Fantasy, Fantasy, Fantasy, Fiction, Fiction, Horror, Sport]
+<3740><15>Customer-347 bought a book from horror section.
+<3748><15>Customer-363 joined the waiting line for crime
+<3753><12><<Assistant-0>> began stocking FICTION section with 2 books
+<3761><15>Customer-247 bought a book from fiction section.
+<3764><15>Customer-365 joined the waiting line for crime
+<3771><12><<Assistant-0>> began stocking SPORT section with 1 books
+<3778><15>Customer-254 bought a book from fiction section.
+<3784><15>Customer-280 bought a book from romance section.
+<3791><15>Customer-368 joined the waiting line for crime
+<3791><12><<Assistant-0>> began stocking FANTASY section with 5 books
+<3797><16>New Delivery!
+<3797><16>Stock Box: [Horror, Fiction, Crime, Romance, Fantasy, Fantasy, Romance, Crime, Horror, Fiction]
+<3802><15>Customer-190 bought a book from fantasy section.
+<3803><12><<Assistant-0>> began stocking HORROR section with 1 books
+<3811><13><<Assistant-1>> is back from break, back to work!
+<3811><14><<Assistant-2>> is taking a break.
+<3812><12><<Assistant-0>> began stocking CRIME section with 1 books
+<3814><15>Customer-359 bought a book from horror section.
+<3819><15>Customer-256 bought a book from fiction section.
+<3821><13><<Assistant-1>> collected 10 books from the box: [Crime, Crime, Horror, Horror, Romance, Romance, Fantasy, Fantasy, Fiction, Fiction]
+<3829><15>Customer-197 bought a book from fantasy section.
+<3839><13><<Assistant-1>> began stocking FICTION section with 2 books
+<3843><15>Customer-374 joined the waiting line for romance
+<3845><16>New Delivery!
+<3845><16>Stock Box: [Romance, Horror, Fantasy, Fantasy, Fiction, Fiction, Horror, Fiction, Fiction, Romance]
+<3848><15>Customer-299 bought a book from crime section.
+<3854><12><<Assistant-0>> collected 10 books from the box: [Romance, Romance, Fantasy, Fantasy, Fiction, Fiction, Fiction, Fiction, Horror, Horror]
+<3855><13><<Assistant-1>> began stocking FANTASY section with 2 books
+<3856><15>Customer-203 bought a book from fantasy section.
+<3867><13><<Assistant-1>> began stocking HORROR section with 2 books
+<3871><12><<Assistant-0>> began stocking FICTION section with 4 books
+<3879><15>Customer-205 bought a book from fantasy section.
+<3881><13><<Assistant-1>> began stocking CRIME section with 2 books
+<3888><12><<Assistant-0>> began stocking FANTASY section with 2 books
+<3895><13><<Assistant-1>> began stocking ROMANCE section with 2 books
+<3902><12><<Assistant-0>> began stocking HORROR section with 2 books
+<3909><15>Customer-362 bought a book from horror section.
+<3910><15>Customer-370 bought a book from horror section.
+<3912><15>Customer-258 bought a book from fiction section.
+<3914><15>Customer-208 bought a book from fantasy section.
+<3916><15>Customer-313 bought a book from crime section.
+<3916><12><<Assistant-0>> began stocking ROMANCE section with 2 books
+<3918><15>Customer-321 bought a book from crime section.
+<3928><14><<Assistant-2>> is back from break, back to work!
+<3933><15>Customer-385 joined the waiting line for crime
+<3944><15>Customer-386 joined the waiting line for crime
+<3972><15>Customer-387 joined the waiting line for crime
+<3976><15>Customer-388 joined the waiting line for crime
+<3982><15>Customer-210 bought a book from fantasy section.
+<3997><15>Customer-282 bought a book from romance section.
+End of day stats: 
+Total Customers: 102
+Customers Served: 60
+Deliveries: 7
+Average wait time: 1044
+<4007><15>Customer-213 bought a book from fantasy section.
+<4016><15>Customer-291 bought a book from romance section.
+<4019><15>Customer-379 bought a book from horror section.
+<4020><15>Customer-214 bought a book from fantasy section.
+<4040><15>Customer-396 joined the waiting line for crime
+<4044><15>Customer-380 bought a book from horror section.
+<4058><15>Customer-260 bought a book from fiction section.
+<4083><15>Customer-298 bought a book from romance section.
+<4084><15>Customer-401 joined the waiting line for crime
+<4104><15>Customer-394 bought a book from horror section.
+<4113><15>Customer-403 joined the waiting line for crime
+<4121><15>Customer-266 bought a book from fiction section.
+<4125><15>Customer-221 bought a book from fantasy section.
+<4145><16>New Delivery!
+<4145><16>Stock Box: [Crime, Romance, Romance, Horror, Crime, Fantasy, Romance, Horror, Sport, Crime]
+<4150><15>Customer-406 joined the waiting line for fantasy
+<4155><13><<Assistant-1>> collected 10 books from the box: [Crime, Crime, Crime, Horror, Horror, Romance, Romance, Romance, Fantasy, Sport]
+<4167><15>Customer-303 bought a book from romance section.
+<4171><13><<Assistant-1>> began stocking SPORT section with 1 books
+<4171><15>Customer-409 joined the waiting line for crime
+<4176><15>Customer-410 joined the waiting line for crime
+<4188><13><<Assistant-1>> began stocking FANTASY section with 1 books
+<4193><15>Customer-225 bought a book from fantasy section.
+<4204><13><<Assistant-1>> began stocking HORROR section with 2 books
+<4220><14><<Assistant-2>> is taking a break.
+<4221><13><<Assistant-1>> began stocking CRIME section with 3 books
+<4226><15>Customer-412 joined the waiting line for fantasy
+<4229><15>Customer-413 joined the waiting line for fantasy
+<4230><16>New Delivery!
+<4230><16>Stock Box: [Fantasy, Fantasy, Fiction, Crime, Sport, Sport, Fiction, Fantasy, Horror, Sport]
+<4233><15>Customer-324 bought a book from crime section.
+<4234><13><<Assistant-1>> began stocking ROMANCE section with 3 books
+<4241><12><<Assistant-0>> collected 10 books from the box: [Crime, Fantasy, Fantasy, Fantasy, Fiction, Fiction, Horror, Sport, Sport, Sport]
+<4254><12><<Assistant-0>> began stocking FICTION section with 2 books
+<4269><12><<Assistant-0>> began stocking SPORT section with 3 books
+<4273><15>Customer-397 bought a book from horror section.
+<4278><15>Customer-304 bought a book from romance section.
+<4284><12><<Assistant-0>> began stocking FANTASY section with 3 books
+<4296><12><<Assistant-0>> began stocking HORROR section with 1 books
+<4301><15>Customer-307 bought a book from romance section.
+<4305><15>Customer-267 bought a book from fiction section.
+<4308><12><<Assistant-0>> began stocking CRIME section with 1 books
+<4327><15>Customer-233 bought a book from fantasy section.
+<4329><14><<Assistant-2>> is back from break, back to work!
+<4329><13><<Assistant-1>> is taking a break.
+<4357><15>Customer-270 bought a book from fiction section.
+<4368><15>Customer-326 bought a book from crime section.
+<4378><15>Customer-317 bought a book from romance section.
+<4384><15>Customer-235 bought a book from fantasy section.
+<4396><16>New Delivery!
+<4396><16>Stock Box: [Romance, Fantasy, Horror, Sport, Fantasy, Fantasy, Fantasy, Fiction, Crime, Fiction]
+<4399><15>Customer-428 joined the waiting line for romance
+<4402><15>Customer-238 bought a book from fantasy section.
+<4407><14><<Assistant-2>> collected 10 books from the box: [Fantasy, Fantasy, Fantasy, Fantasy, Crime, Horror, Romance, Fiction, Fiction, Sport]
+<4412><15>Customer-430 joined the waiting line for fantasy
+<4417><15>Customer-402 bought a book from horror section.
+<4426><14><<Assistant-2>> began stocking FICTION section with 2 books
+<4431><15>Customer-276 bought a book from fiction section.
+<4437><15>Customer-327 bought a book from crime section.
+<4445><14><<Assistant-2>> began stocking SPORT section with 1 books
+<4448><15>Customer-278 bought a book from fiction section.
+<4455><13><<Assistant-1>> is back from break, back to work!
+<4460><14><<Assistant-2>> began stocking FANTASY section with 4 books
+<4471><14><<Assistant-2>> began stocking HORROR section with 1 books
+<4478><15>Customer-251 bought a book from fantasy section.
+<4483><14><<Assistant-2>> began stocking CRIME section with 1 books
+<4493><14><<Assistant-2>> began stocking ROMANCE section with 1 books
+<4500><15>Customer-329 bought a book from crime section.
+<4511><15>Customer-336 bought a book from crime section.
+<4522><15>Customer-261 bought a book from fantasy section.
+<4545><15>Customer-417 bought a book from horror section.
+<4568><15>Customer-268 bought a book from fantasy section.
+<4572><15>Customer-431 bought a book from horror section.
+<4574><16>New Delivery!
+<4574><16>Stock Box: [Horror, Sport, Fantasy, Romance, Fantasy, Fiction, Horror, Crime, Crime, Horror]
+<4577><15>Customer-318 bought a book from romance section.
+<4581><15>Customer-287 bought a book from fiction section.
+<4583><16>New Delivery!
+<4583><16>Stock Box: [Horror, Sport, Fantasy, Romance, Fantasy, Fiction, Horror, Crime, Crime, Horror, Horror, Fiction, Horror, Horror, Fantasy, Horror, Horror, Sport, Romance, Romance]
+<4584><12><<Assistant-0>> collected 10 books from the box: [Crime, Crime, Romance, Fantasy, Fantasy, Fiction, Horror, Horror, Horror, Sport]
+<4588><15>Customer-295 bought a book from fiction section.
+<4602><15>Customer-301 bought a book from fiction section.
+<4602><12><<Assistant-0>> began stocking FICTION section with 1 books
+<4608><15>Customer-271 bought a book from fantasy section.
+<4609><14><<Assistant-2>> collected 10 books from the box: [Fantasy, Horror, Horror, Horror, Horror, Horror, Romance, Romance, Fiction, Sport]
+<4617><12><<Assistant-0>> began stocking SPORT section with 1 books
+<4620><16>New Delivery!
+<4620><16>Stock Box: [Sport, Romance, Fantasy, Horror, Horror, Fantasy, Fiction, Sport, Fiction, Sport]
+<4627><14><<Assistant-2>> began stocking FICTION section with 1 books
+<4629><15>Customer-452 joined the waiting line for romance
+<4633><13><<Assistant-1>> collected 10 books from the box: [Horror, Horror, Romance, Fantasy, Fantasy, Fiction, Fiction, Sport, Sport, Sport]
+<4635><12><<Assistant-0>> began stocking FANTASY section with 2 books
+<4637><15>Customer-311 bought a book from fiction section.
+<4644><14><<Assistant-2>> began stocking SPORT section with 1 books
+<4648><15>Customer-312 bought a book from fiction section.
+<4651><12><<Assistant-0>> began stocking HORROR section with 3 books
+<4652><13><<Assistant-1>> began stocking FICTION section with 2 books
+<4657><15>Customer-443 bought a book from horror section.
+<4659><15>Customer-319 bought a book from fiction section.
+<4660><14><<Assistant-2>> began stocking FANTASY section with 1 books
+<4665><12><<Assistant-0>> began stocking CRIME section with 2 books
+<4671><13><<Assistant-1>> began stocking SPORT section with 3 books
+<4671><15>Customer-323 bought a book from fiction section.
+<4671><16>New Delivery!
+<4671><16>Stock Box: [Romance, Romance, Fiction, Fantasy, Romance, Fiction, Fantasy, Romance, Sport, Romance]
+<4676><12><<Assistant-0>> began stocking ROMANCE section with 1 books
+<4679><14><<Assistant-2>> began stocking HORROR section with 5 books
+<4686><13><<Assistant-1>> began stocking FANTASY section with 2 books
+<4692><14><<Assistant-2>> began stocking ROMANCE section with 2 books
+<4695><12><<Assistant-0>> collected 10 books from the box: [Romance, Romance, Romance, Romance, Romance, Fantasy, Fantasy, Fiction, Fiction, Sport]
+<4699><13><<Assistant-1>> began stocking HORROR section with 2 books
+<4709><13><<Assistant-1>> began stocking ROMANCE section with 1 books
+<4714><12><<Assistant-0>> began stocking FICTION section with 2 books
+<4717><15>Customer-341 bought a book from crime section.
+<4721><16>New Delivery!
+<4721><16>Stock Box: [Horror, Sport, Sport, Fiction, Romance, Crime, Fantasy, Fantasy, Fiction, Fantasy]
+<4729><12><<Assistant-0>> began stocking SPORT section with 1 books
+<4730><13><<Assistant-1>> collected 10 books from the box: [Crime, Horror, Romance, Fantasy, Fantasy, Fantasy, Fiction, Fiction, Sport, Sport]
+<4732><15>Customer-342 bought a book from crime section.
+<4734><15>Customer-320 bought a book from romance section.
+<4741><15>Customer-325 bought a book from fiction section.
+<4743><16>New Delivery!
+<4743><16>Stock Box: [Romance, Fantasy, Fantasy, Fiction, Horror, Romance, Sport, Fiction, Romance, Fantasy]
+<4745><15>Customer-462 joined the waiting line for crime
+<4746><12><<Assistant-0>> began stocking FANTASY section with 2 books
+<4746><16>New Delivery!
+<4746><16>Stock Box: [Romance, Fantasy, Fantasy, Fiction, Horror, Romance, Sport, Fiction, Romance, Fantasy, Horror, Crime, Fiction, Romance, Romance, Crime, Sport, Fiction, Fantasy, Horror]
+<4749><13><<Assistant-1>> began stocking FICTION section with 2 books
+<4753><15>Customer-445 bought a book from horror section.
+<4757><14><<Assistant-2>> collected 10 books from the box: [Fantasy, Fantasy, Fantasy, Horror, Romance, Romance, Romance, Fiction, Fiction, Sport]
+<4765><12><<Assistant-0>> began stocking ROMANCE section with 5 books
+<4768><13><<Assistant-1>> began stocking SPORT section with 2 books
+<4769><15>Customer-455 bought a book from horror section.
+<4776><14><<Assistant-2>> began stocking FICTION section with 2 books
+<4780><15>Customer-330 bought a book from romance section.
+<4780><16>New Delivery!
+<4780><16>Stock Box: [Horror, Crime, Fiction, Romance, Romance, Crime, Sport, Fiction, Fantasy, Horror, Sport, Romance, Sport, Horror, Crime, Fiction, Fantasy, Crime, Fantasy, Fiction]
+<4784><13><<Assistant-1>> began stocking FANTASY section with 3 books
+<4784><12><<Assistant-0>> collected 10 books from the box: [Crime, Crime, Romance, Romance, Fantasy, Fiction, Fiction, Horror, Horror, Sport]
+<4785><15>Customer-328 bought a book from fiction section.
+<4787><15>Customer-275 bought a book from fantasy section.
+<4791><15>Customer-333 bought a book from romance section.
+<4793><14><<Assistant-2>> began stocking SPORT section with 1 books
+<4797><13><<Assistant-1>> began stocking HORROR section with 1 books
+<4804><12><<Assistant-0>> began stocking FICTION section with 2 books
+<4809><13><<Assistant-1>> began stocking CRIME section with 1 books
+<4811><15>Customer-346 bought a book from crime section.
+<4812><14><<Assistant-2>> began stocking FANTASY section with 3 books
+<4813><15>Customer-463 bought a book from horror section.
+<4820><13><<Assistant-1>> began stocking ROMANCE section with 1 books
+<4821><12><<Assistant-0>> began stocking SPORT section with 1 books
+<4822><15>Customer-284 bought a book from fantasy section.
+<4825><14><<Assistant-2>> began stocking HORROR section with 1 books
+<4828><15>Customer-289 bought a book from fantasy section.
+<4837><12><<Assistant-0>> began stocking FANTASY section with 1 books
+<4839><13><<Assistant-1>> collected 10 books from the box: [Crime, Crime, Horror, Romance, Fantasy, Fantasy, Fiction, Fiction, Sport, Sport]
+<4840><14><<Assistant-2>> began stocking ROMANCE section with 3 books
+<4844><15>Customer-338 bought a book from romance section.
+<4852><12><<Assistant-0>> began stocking HORROR section with 2 books
+<4858><13><<Assistant-1>> began stocking FICTION section with 2 books
+<4859><16>New Delivery!
+<4859><16>Stock Box: [Romance, Fiction, Fiction, Horror, Sport, Fantasy, Romance, Horror, Fiction, Crime]
+<4867><12><<Assistant-0>> began stocking CRIME section with 2 books
+<4869><14><<Assistant-2>> collected 10 books from the box: [Fantasy, Crime, Horror, Horror, Romance, Romance, Fiction, Fiction, Fiction, Sport]
+<4870><15>Customer-349 bought a book from romance section.
+<4876><13><<Assistant-1>> began stocking SPORT section with 2 books
+<4878><15>Customer-352 bought a book from crime section.
+<4880><12><<Assistant-0>> began stocking ROMANCE section with 2 books
+<4885><15>Customer-354 bought a book from crime section.
+<4886><15>Customer-478 joined the waiting line for crime
+<4888><14><<Assistant-2>> began stocking FICTION section with 3 books
+<4890><15>Customer-360 bought a book from romance section.
+<4891><15>Customer-292 bought a book from fantasy section.
+<4891><13><<Assistant-1>> began stocking FANTASY section with 2 books
+<4898><15>Customer-367 bought a book from romance section.
+<4903><14><<Assistant-2>> began stocking SPORT section with 1 books
+<4904><13><<Assistant-1>> began stocking HORROR section with 1 books
+<4908><15>Customer-464 bought a book from horror section.
+<4917><13><<Assistant-1>> began stocking CRIME section with 2 books
+<4919><14><<Assistant-2>> began stocking FANTASY section with 1 books
+<4928><13><<Assistant-1>> began stocking ROMANCE section with 1 books
+<4934><14><<Assistant-2>> began stocking HORROR section with 2 books
+<4942><15>Customer-331 bought a book from fiction section.
+<4946><14><<Assistant-2>> began stocking CRIME section with 1 books
+<4946><15>Customer-334 bought a book from fiction section.
+<4958><15>Customer-470 bought a book from horror section.
+<4958><14><<Assistant-2>> began stocking ROMANCE section with 2 books
+<4961><16>New Delivery!
+<4961><16>Stock Box: [Horror, Sport, Fiction, Fantasy, Sport, Fantasy, Fantasy, Sport, Romance, Romance]
+<4971><15>Customer-374 bought a book from romance section.
+<4972><13><<Assistant-1>> collected 10 books from the box: [Horror, Romance, Romance, Fantasy, Fantasy, Fantasy, Fiction, Sport, Sport, Sport]
+<4988><13><<Assistant-1>> began stocking FICTION section with 1 books
+<4990><12><<Assistant-0>> is taking a break.
+<4996><15>Customer-390 bought a book from romance section.
+<4997><16>New Delivery!
+<4997><16>Stock Box: [Fiction, Romance, Sport, Horror, Fiction, Crime, Romance, Sport, Horror, Sport]
+End of day stats: 
+Total Customers: 100
+Customers Served: 71
+Deliveries: 14
+Average wait time: 1206
+<5000><15>Customer-393 bought a book from romance section.
+<5004><15>Customer-343 bought a book from fiction section.
+<5007><14><<Assistant-2>> collected 10 books from the box: [Crime, Horror, Horror, Romance, Romance, Fiction, Fiction, Sport, Sport, Sport]
+<5007><13><<Assistant-1>> began stocking SPORT section with 3 books
+<5025><13><<Assistant-1>> began stocking FANTASY section with 3 books
+<5025><14><<Assistant-2>> began stocking FICTION section with 2 books
+<5029><15>Customer-400 bought a book from romance section.
+<5031><15>Customer-355 bought a book from crime section.
+<5036><13><<Assistant-1>> began stocking HORROR section with 1 books
+<5043><14><<Assistant-2>> began stocking SPORT section with 3 books
+<5049><13><<Assistant-1>> began stocking ROMANCE section with 2 books
+<5055><15>Customer-356 bought a book from crime section.
+<5058><14><<Assistant-2>> began stocking HORROR section with 2 books
+<5060><15>Customer-483 bought a book from horror section.
+<5063><15>Customer-408 bought a book from romance section.
+<5071><14><<Assistant-2>> began stocking CRIME section with 1 books
+<5076><15>Customer-418 bought a book from romance section.
+<5082><15>Customer-294 bought a book from fantasy section.
+<5083><15>Customer-487 bought a book from horror section.
+<5083><14><<Assistant-2>> began stocking ROMANCE section with 2 books
+<5101><15>Customer-351 bought a book from fiction section.
+<5104><15>Customer-419 bought a book from romance section.
+<5109><12><<Assistant-0>> is back from break, back to work!
+<5116><15>Customer-358 bought a book from crime section.
+<5120><16>New Delivery!
+<5120><16>Stock Box: [Sport, Horror, Fantasy, Romance, Horror, Sport, Horror, Fiction, Horror, Horror]
+<5123><15>Customer-363 bought a book from crime section.
+<5126><15>Customer-497 bought a book from horror section.
+<5130><14><<Assistant-2>> collected 10 books from the box: [Fantasy, Horror, Horror, Horror, Horror, Horror, Romance, Fiction, Sport, Sport]
+<5144><16>New Delivery!
+<5144><16>Stock Box: [Sport, Horror, Fantasy, Romance, Horror, Crime, Horror, Fantasy, Fiction, Horror]
+<5145><15>Customer-426 bought a book from romance section.
+<5146><14><<Assistant-2>> began stocking FICTION section with 1 books
+<5153><12><<Assistant-0>> collected 10 books from the box: [Crime, Romance, Fantasy, Fantasy, Fiction, Horror, Horror, Horror, Horror, Sport]
+<5159><15>Customer-297 bought a book from fantasy section.
+<5163><14><<Assistant-2>> began stocking SPORT section with 2 books
+<5171><12><<Assistant-0>> began stocking FICTION section with 1 books
+<5178><14><<Assistant-2>> began stocking FANTASY section with 1 books
+<5189><12><<Assistant-0>> began stocking SPORT section with 1 books
+<5198><14><<Assistant-2>> began stocking HORROR section with 5 books
+<5200><15>Customer-511 joined the waiting line for crime
+<5200><16>New Delivery!
+<5200><16>Stock Box: [Sport, Horror, Fantasy, Crime, Fiction, Horror, Sport, Crime, Sport, Romance]

@@ -16,6 +16,7 @@ public class Assistant implements Runnable {
     String name;
     int booksCounter = 0;
     static int carrySpace = 10;
+    List<Queue<String>> waitingLists = new ArrayList<>();
 
     public Assistant(String name, List<Books> booksInHands, int booksCounter) {
         this.booksInHands = booksInHands;
@@ -71,7 +72,7 @@ public class Assistant implements Runnable {
     // Checks to see if a customer is waiting at a particular section
     public boolean isWaiting(Queue<String> Section) {
         boolean isWaiting = false;
-        if (Section.size() != 0) {
+        if (!Section.isEmpty()) {
             isWaiting = true;
         }
 
@@ -94,7 +95,7 @@ public class Assistant implements Runnable {
                 assistant.acquire(); // semaphore used to to ensure two assistants aren't going to box at the same
                                      // time
                 if (!Box.BooksInBox.isEmpty()) {
-                    if (isWaiting(Section.CrimeWaitingLine)) {
+                    if (!Section.CrimeWaitingLine.isEmpty()) {
                         priorityType.add("Crime");
                     }
                     if (isWaiting(Section.HorrorWaitingLine)) {
@@ -151,7 +152,7 @@ public class Assistant implements Runnable {
 
             }
             // as long as books in hands doesn't equal 0, so assistant has books in hands
-            if (booksInHands.size() != 0) {
+            if (!booksInHands.isEmpty()) {
                 synchronized (lock) {
                     // create an iterator which iterates through the books in hands
                     Iterator<Books> iterator = booksInHands.iterator();

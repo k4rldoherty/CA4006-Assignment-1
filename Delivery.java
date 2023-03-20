@@ -3,7 +3,7 @@ import java.util.*;
 public class Delivery {
     static Object Books = new Books();
     static int size = 10;
-    public static List<Books> DeliveryList = new ArrayList<Books>();
+    public static List<Books> deliveryList = new ArrayList<Books>();
     static int DeliveryCount = 0;
 
     public static List<Books> GenerateDelivery() {
@@ -14,21 +14,21 @@ public class Delivery {
 
             book.setCategory();
 
-            DeliveryList.add(book);
+            deliveryList.add(book);
 
             i++;
         }
-        return DeliveryList;
+        return deliveryList;
     }
 
     public int size() {
-        int Size = DeliveryList.size();
+        int Size = deliveryList.size();
         return Size;
     }
 
     @Override
     public String toString() {
-        return "" + DeliveryList;
+        return "" + deliveryList;
     }
 
     public static String NextDeliveryTime() {

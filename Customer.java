@@ -179,7 +179,7 @@ public class Customer implements Runnable {
                           // empty by the line isn't empty either
                         else if (!Section.FictionSection.isEmpty() && !Section.FictionWaitingLine.isEmpty()) {
                             // Adding the current customer to the Waiting Queue
-                            Section.CustomerWaitingLine(Section.FictionWaitingLine, customer_and_start_time);
+                            Section.customerQueue(Section.FictionWaitingLine, customer_and_start_time);
                             // Get the customer who is first in the Line
                             String customer_in_queue = Section.FictionWaitingLine.remove();
                             // Split this string into parts
@@ -201,7 +201,7 @@ public class Customer implements Runnable {
                         } // This is the third case where the Section is empty
                         else if (Section.FictionSection.isEmpty()) {
                             // The Customer is added to the appropriate waiting line
-                            Section.CustomerWaitingLine(Section.FictionWaitingLine, customer_and_start_time);
+                            Section.customerQueue(Section.FictionWaitingLine, customer_and_start_time);
                             System.out
                                     .println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer
                                             + " joined the waiting line for "
@@ -223,7 +223,7 @@ public class Customer implements Runnable {
                                     " bought a book from " + genre + " section.");
 
                         } else if (!Section.FantasySection.isEmpty() && !Section.FantasyWaitingLine.isEmpty()) {
-                            Section.CustomerWaitingLine(Section.FantasyWaitingLine, customer_and_start_time);
+                            Section.customerQueue(Section.FantasyWaitingLine, customer_and_start_time);
                             String customer_in_queue = Section.FantasyWaitingLine.remove();
                             String[] parts = customer_in_queue.split(":");
                             String customer_to_serve = parts[0];
@@ -236,7 +236,7 @@ public class Customer implements Runnable {
                                     + " bought a book from "
                                     + genre + " section.");
                         } else if (Section.FantasySection.isEmpty()) {
-                            Section.CustomerWaitingLine(Section.FantasyWaitingLine, customer_and_start_time);
+                            Section.customerQueue(Section.FantasyWaitingLine, customer_and_start_time);
                             System.out
                                     .println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer
                                             + " joined the waiting line for "
@@ -257,7 +257,7 @@ public class Customer implements Runnable {
                             System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer +
                                     " bought a book from " + genre + " section.");
                         } else if (!Section.CrimeSection.isEmpty() && !Section.CrimeWaitingLine.isEmpty()) {
-                            Section.CustomerWaitingLine(Section.CrimeWaitingLine, customer_and_start_time);
+                            Section.customerQueue(Section.CrimeWaitingLine, customer_and_start_time);
                             String customer_in_queue = Section.CrimeWaitingLine.remove();
                             String[] parts = customer_in_queue.split(":");
                             String customer_to_serve = parts[0];
@@ -270,7 +270,7 @@ public class Customer implements Runnable {
                                     + " bought a book from "
                                     + genre + " section.");
                         } else if (Section.CrimeSection.isEmpty()) {
-                            Section.CustomerWaitingLine(Section.CrimeWaitingLine, customer_and_start_time);
+                            Section.customerQueue(Section.CrimeWaitingLine, customer_and_start_time);
                             System.out
                                     .println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer
                                             + " joined the waiting line for "
@@ -291,7 +291,7 @@ public class Customer implements Runnable {
                             System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer +
                                     " bought a book from " + genre + " section.");
                         } else if (!Section.RomanceSection.isEmpty() && !Section.RomanceWaitingLine.isEmpty()) {
-                            Section.CustomerWaitingLine(Section.RomanceWaitingLine, customer_and_start_time);
+                            Section.customerQueue(Section.RomanceWaitingLine, customer_and_start_time);
                             String customer_in_queue = Section.RomanceWaitingLine.remove();
                             String[] parts = customer_in_queue.split(":");
                             String customer_to_serve = parts[0];
@@ -304,7 +304,7 @@ public class Customer implements Runnable {
                                     + " bought a book from "
                                     + genre + " section.");
                         } else if (Section.RomanceSection.isEmpty()) {
-                            Section.CustomerWaitingLine(Section.RomanceWaitingLine, customer_and_start_time);
+                            Section.customerQueue(Section.RomanceWaitingLine, customer_and_start_time);
                             System.out
                                     .println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer
                                             + " joined the waiting line for "
@@ -325,7 +325,7 @@ public class Customer implements Runnable {
                             System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer +
                                     " bought a book from " + genre + " section.");
                         } else if (!Section.HorrorSection.isEmpty() && !Section.HorrorWaitingLine.isEmpty()) {
-                            Section.CustomerWaitingLine(Section.HorrorWaitingLine, customer_and_start_time);
+                            Section.customerQueue(Section.HorrorWaitingLine, customer_and_start_time);
                             String customer_in_queue = Section.HorrorWaitingLine.remove();
                             String[] parts = customer_in_queue.split(":");
                             String customer_to_serve = parts[0];
@@ -338,7 +338,7 @@ public class Customer implements Runnable {
                                     + " bought a book from "
                                     + genre + " section.");
                         } else if (Section.HorrorSection.isEmpty()) {
-                            Section.CustomerWaitingLine(Section.HorrorWaitingLine, customer_and_start_time);
+                            Section.customerQueue(Section.HorrorWaitingLine, customer_and_start_time);
                             System.out
                                     .println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer
                                             + " joined the waiting line for "
@@ -359,7 +359,7 @@ public class Customer implements Runnable {
                             System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer +
                                     " bought a book from " + genre + " section.");
                         } else if (!Section.SportSection.isEmpty() && Section.SportWaitingLine.isEmpty()) {
-                            Section.CustomerWaitingLine(Section.SportWaitingLine, customer_and_start_time);
+                            Section.customerQueue(Section.SportWaitingLine, customer_and_start_time);
                             String customer_in_queue = Section.SportWaitingLine.remove();
                             String[] parts = customer_in_queue.split(":");
                             String customer_to_serve = parts[0];
@@ -372,7 +372,7 @@ public class Customer implements Runnable {
                                     + " bought a book from "
                                     + genre + " section.");
                         } else if (Section.SportSection.isEmpty()) {
-                            Section.CustomerWaitingLine(Section.SportWaitingLine, customer_and_start_time);
+                            Section.customerQueue(Section.SportWaitingLine, customer_and_start_time);
                             System.out
                                     .println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer
                                             + " joined the waiting line for "
