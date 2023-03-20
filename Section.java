@@ -61,20 +61,4 @@ public class Section {
             }
         }
     }
-
-    public static Queue<String> CustomerWaitingLine(Queue<String> CustomerWaitingLine, String Customer) {
-
-        CustomerWaitingLine.add(Customer);
-
-        return CustomerWaitingLine;
-    }
-
-    public static boolean LineEmpty(Queue<String> CustomerWaitingLine) {
-        if (CustomerWaitingLine.size() == 0) {
-            return true;
-        } else {
-            return false;
-        }
-
-    }
 }
