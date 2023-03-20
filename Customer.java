@@ -7,7 +7,6 @@ import java.util.Random;
 public class Customer implements Runnable {
     private final String[] genres = { "FICTION", "HORROR", "ROMANCE", "FANTASY", "SPORT", "CRIME" };
     static int customerCount;
-    static int customerServedCount;
     private String customer;
     static List<Integer> CustomerWaitTimes = new ArrayList<>();
 
@@ -29,33 +28,33 @@ public class Customer implements Runnable {
                 Random random = new Random();
                 String genre = genres[random.nextInt(genres.length)];
                 List<Book> section = new ArrayList<Book>();
-                Queue<String> waitline = new LinkedList<>();
+                Queue<String> queue = new LinkedList<>();
     
                 if (genre == "FICTION"){
                     section = Section.FictionSection;
-                    waitline = Section.FictionWaitingLine;
+                    queue = Section.FictionQueue;
                 } else if (genre == "CRIME"){
                     section = Section.CrimeSection;
-                    waitline = Section.CrimeWaitingLine;
+                    queue = Section.CrimeQueue;
                 } else if (genre == "HORROR"){
                     section = Section.HorrorSection;
-                    waitline = Section.HorrorWaitingLine;
+                    queue = Section.HorrorQueue;
                 } else if (genre == "ROMANCE"){
                     section = Section.RomanceSection;
-                    waitline = Section.RomanceWaitingLine;
+                    queue = Section.RomanceQueue;
                 } else if (genre == "SPORT"){
                     section = Section.SportSection;
-                    waitline = Section.SportWaitingLine;
+                    queue = Section.SportQueue;
                 } else if (genre == "FANTASY"){
                     section = Section.FantasySection;
-                    waitline = Section.FantasyWaitingLine;
+                    queue = Section.FantasyQueue;
                 }
-                if (!section.isEmpty() && waitline.isEmpty()) {
+                if (!section.isEmpty() && queue.isEmpty()) {
                     section.remove(0);
                     System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer + " bought a book from " + genre + " section.");
-                } else if (section.isEmpty() || !waitline.isEmpty()) {
-                    waitline.add(customer);
-                    System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer + " joined the waiting line for " + genre + waitline.toString());
+                } else if (section.isEmpty() || !queue.isEmpty()) {
+                    queue.add(customer);
+                    System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer + " joined the waiting line for " + genre);
                 }
             }
             try {
@@ -64,29 +63,29 @@ public class Customer implements Runnable {
                 e.printStackTrace();
             }
             List<Book> section = new ArrayList<Book>();
-            Queue<String> waitline = new LinkedList<>();
+            Queue<String> queue = new LinkedList<>();
             for (String genre : genres){
                 if (genre == "FICTION"){
                     section = Section.FictionSection;
-                    waitline = Section.FictionWaitingLine;
+                    queue = Section.FictionQueue;
                 } else if (genre == "CRIME"){
                     section = Section.CrimeSection;
-                    waitline = Section.CrimeWaitingLine;
+                    queue = Section.CrimeQueue;
                 } else if (genre == "HORROR"){
                     section = Section.HorrorSection;
-                    waitline = Section.HorrorWaitingLine;
+                    queue = Section.HorrorQueue;
                 } else if (genre == "ROMANCE"){
                     section = Section.RomanceSection;
-                    waitline = Section.RomanceWaitingLine;
+                    queue = Section.RomanceQueue;
                 } else if (genre == "SPORT"){
                     section = Section.SportSection;
-                    waitline = Section.SportWaitingLine;
+                    queue = Section.SportQueue;
                 } else if (genre == "FANTASY"){
                     section = Section.FantasySection;
-                    waitline = Section.FantasyWaitingLine;
+                    queue = Section.FantasyQueue;
                 }
-                if (!waitline.isEmpty() && !section.isEmpty()){
-                    customer = waitline.remove();
+                if (!queue.isEmpty() && !section.isEmpty()){
+                    customer = queue.remove();
                     section.remove(0);
                     long threadId = Thread.currentThread().getId();
                     System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + customer + " was waiting but has now bought from " + genre + " section.");

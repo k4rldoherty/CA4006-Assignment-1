@@ -41,18 +41,12 @@ public class Box implements Runnable {
 
     @Override
     public String toString() {
-        return "" + BooksInBox;
-    }
-
-    public static void main(String[] args) {
-  
+        return BooksInBox.toString();
     }
 
     @Override
     public void run() {
-        List<Book> delivery = Delivery.GenerateDelivery();
+        List<Book> delivery = Delivery.getNewDelivery();
         box.FillBox(new ArrayList<>(delivery));
-
     }
-
 }

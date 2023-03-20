@@ -8,12 +8,12 @@ public class Section {
     static List<Book> FantasySection = new ArrayList<Book>();
     static List<Book> RomanceSection = new ArrayList<Book>();
     static List<Book> CrimeSection = new ArrayList<Book>();
-    static Queue<String> FictionWaitingLine = new LinkedList<>();
-    static Queue<String> HorrorWaitingLine = new LinkedList<>();
-    static Queue<String> SportWaitingLine = new LinkedList<>();
-    static Queue<String> FantasyWaitingLine = new LinkedList<>();
-    static Queue<String> RomanceWaitingLine = new LinkedList<>();
-    static Queue<String> CrimeWaitingLine = new LinkedList<>();
+    static Queue<String> FictionQueue = new LinkedList<>();
+    static Queue<String> HorrorQueue = new LinkedList<>();
+    static Queue<String> SportQueue = new LinkedList<>();
+    static Queue<String> FantasyQueue = new LinkedList<>();
+    static Queue<String> RomanceQueue = new LinkedList<>();
+    static Queue<String> CrimeQueue = new LinkedList<>();
 
     public static void AddBooksToShelves(Book book) {
 
