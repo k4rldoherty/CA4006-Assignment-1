@@ -32,25 +32,14 @@ public class Delivery {
     }
 
     public static String NextDeliveryTime() {
-        List<String> ProbabilityOfDelivery = new ArrayList<String>();
-        var i = 0;
-        while (i < 100) {
-            if (i != 99) {
-                ProbabilityOfDelivery.add("False");
-            } else {
-                ProbabilityOfDelivery.add("True");
-            }
-            i++;
-        }
-
-        int UpperRange = ProbabilityOfDelivery.size();
-
         Random rand = new Random();
-        int Index = rand.nextInt(UpperRange);
-
-        String IsDelivery = ProbabilityOfDelivery.get(Index);
-
-        return IsDelivery;
+        int randomNumber = rand.nextInt(100);
+    
+        if (randomNumber == 99) {
+            return "True";
+        } else {
+            return "False";
+        }    
     }
 
     public static void main(String[] args) {
