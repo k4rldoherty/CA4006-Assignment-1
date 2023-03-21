@@ -1,52 +1,47 @@
 import java.util.*;
 
 public class Box implements Runnable {
-    public static List<Book> BooksInBox = new ArrayList<Book>();
+    public static List<Book> boxBooks = new ArrayList<Book>();
     static Box box = new Box();
 
 
     public static List<Book> getBooks() {
         List<Book> books = new ArrayList<>();
-        synchronized (BooksInBox) {
-            while (BooksInBox.isEmpty()) {
+        synchronized (boxBooks) {
+            while (boxBooks.isEmpty()) {
                 try {
-                    BooksInBox.wait();
+                    boxBooks.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
-            Iterator<Book> iterator = BooksInBox.iterator();
-            int count = 0;
-            while (iterator.hasNext() && count < 10) {
-                Book book = iterator.next();
-                iterator.remove();
-                books.add(book);
-                count++;
-            }
+            int size = Math.min(boxBooks.size(), 10);
+            books.addAll(boxBooks.subList(0, size));
+            boxBooks.subList(0, size).clear();
         }
         return books;
     }
 
-    public List<Book> FillBox(List<Book> DeliveryList) {
+    public List<Book> addToBox(List<Book> DeliveryList) {
         for (Book book : DeliveryList) {
-            BooksInBox.add(book);
+            boxBooks.add(book);
         }
-        return BooksInBox;
+        return boxBooks;
     }
 
     public int size() {
-        int Size = BooksInBox.size();
+        int Size = boxBooks.size();
         return Size;
     }
 
     @Override
     public String toString() {
-        return BooksInBox.toString();
+        return boxBooks.toString();
     }
 
     @Override
     public void run() {
         List<Book> delivery = Delivery.getNewDelivery();
-        box.FillBox(new ArrayList<>(delivery));
+        box.addToBox(new ArrayList<>(delivery));
     }
 }

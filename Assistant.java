@@ -3,77 +3,46 @@ import java.util.concurrent.Semaphore;
 
 public class Assistant implements Runnable {
     private int assistantTicks = 0;
-    List<Book> booksInHands = new ArrayList<Book>();
-    private static Semaphore assistant = new Semaphore(1);
-    private static Semaphore assistantBreak = new Semaphore(1);
-    static Random rand = new Random();
-    private static int randomNumber = rand.nextInt(101) + 200;
+    List<Book> carriedBooks = new ArrayList<Book>();
+    private static Semaphore assistantSemaphore = new Semaphore(1);
+    private static Semaphore breakSemaphore = new Semaphore(1);
+    static Random random = new Random();
     String name;
-    int booksCounter = 0;
-    static int carrySpace = 10;
+    int bookCount = 0;
+    static int capacity = 10;
 
-    public Assistant(String name, List<Book> booksInHands, int booksCounter) {
-        this.booksInHands = booksInHands;
+    public Assistant(String name, List<Book> carriedBooks, int bookCount) {
+        this.carriedBooks = carriedBooks;
         this.name = name;
-        this.booksCounter = booksCounter;
+        this.bookCount = bookCount;
     }
-
-    // Take books from the box for each assistant with new BooksToTake variable each
-    // time, only called if no one is waiting in a queue
-
-    public List<Book> takeBooksFromBox() {
-        List<Book> books = Box.getBooks();
-        List<Book> booksToTake = new ArrayList<>();
-    
-        Iterator<Book> iterator = books.iterator();
-        while (iterator.hasNext() && booksToTake.size() < carrySpace) {
-            Book book = iterator.next();
-            iterator.remove();
-            booksToTake.add(book);
-        }
-    
-        if (booksToTake.isEmpty()) {
-            return null;
-        } else {
-            return booksToTake;
-        }
-    }
-
 
     @Override
     public void run() {
         while (true) {
-            long threadId = Thread.currentThread().getId(); // get current threadID
+            assistantTicks++;
+            long threadId = Thread.currentThread().getId(); 
             try {
 
-                Thread.sleep(1 * Main.TICK_TIME_SIZE); // sleep for 1 tick
+                Thread.sleep(1 * Main.TICK_TIME_SIZE); 
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            assistantTicks++;
-
             try {
-                assistant.acquire(); // semaphore used to to ensure two assistants aren't going to box at the same
-                                     // time
-                if (!Box.BooksInBox.isEmpty()) {
-                    try {
-                        // as long as assitant has no books in hand and there is no one waiting in a
-                        // queue, take books from the box
-                        if (booksInHands.size() == 0) {
-                            try {
-                                Thread.sleep(10 * Main.TICK_TIME_SIZE);
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
-                            booksInHands = Box.getBooks();
+                assistantSemaphore.acquire();
+                if (!Box.boxBooks.isEmpty()) {
+                    if (carriedBooks.size() == 0) {
+                        try {
+                            Thread.sleep(10 * Main.TICK_TIME_SIZE);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
                         }
-                        System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name
-                                + " collected 10 books from the box: " + booksInHands);
-                    } finally {
-
+                        carriedBooks = Box.getBooks();
                     }
+                    System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name
+                            + " collected 10 books from the box: " + carriedBooks);
                     try {
-                        Thread.sleep((booksInHands.size() + 10) * Main.TICK_TIME_SIZE); // sleep for 10 ticks
+                        Thread.sleep((carriedBooks.size() + 10) * Main.TICK_TIME_SIZE);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -81,27 +50,25 @@ public class Assistant implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
-                assistant.release(); // release the semaphore so another assistant can perform this action
-
+                assistantSemaphore.release();
             }
-            // as long as books in hands doesn't equal 0, so assistant has books in hands
-            if (booksInHands.size() != 0) {
+            if (carriedBooks.size() != 0) {
                 Map<String, Integer> booksByCategory = new HashMap<>();
-                for (Book book : booksInHands) {
+                for (Book book : carriedBooks) {
                     String category = book.toString();
                     booksByCategory.put(category, booksByCategory.getOrDefault(category, 0) + 1);
                 }
                 for (Map.Entry<String, Integer> entry : booksByCategory.entrySet()) {
                     String category = entry.getKey();
                     int count = entry.getValue();
-                    Iterator<Book> iterator = booksInHands.iterator();
-                    int booksCounter = 0;
+                    Iterator<Book> iterator = carriedBooks.iterator();
+                    int bookCount = 0;
                     while (iterator.hasNext()) {
                         Book book = iterator.next();
                         if (book.toString().equals(category)) {
                             Section.AddBooksToShelves(book);
                             iterator.remove();
-                            booksCounter++;
+                            bookCount++;
                             try {
                                 Thread.sleep(1 * Main.TICK_TIME_SIZE);
                             } catch (InterruptedException e) {
@@ -110,8 +77,9 @@ public class Assistant implements Runnable {
                         }
                         if (!iterator.hasNext()) {
                             System.out.println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name
-                                    + " began stocking " + category.toUpperCase() + " section with " + booksCounter + " books");
-                            booksCounter = 0;
+                                    + " began stocking " + category.toUpperCase() + " section with " + bookCount
+                                    + " books");
+                            bookCount = 0;
                             try {
                                 Thread.sleep((count + 10) * Main.TICK_TIME_SIZE);
                             } catch (InterruptedException e) {
@@ -122,28 +90,20 @@ public class Assistant implements Runnable {
                 }
             }
 
-            // if the assistantsTicks modulo the random number between 200-300
+            int randomNumber = random.nextInt(100) + 200;
             if (assistantTicks % randomNumber == 0) {
                 try {
-                    assistantBreak.acquire(); // semaphore acquire so only one assitant can take a break at a time
-                    System.out
-                            .println("<" + Main.tickCount + ">" + "<" + threadId + ">" + name + " is taking a break.");
-                    Thread.sleep(150 * Main.TICK_TIME_SIZE); // sleep for 150 ticks
-                    randomNumber = rand.nextInt(101) + 200 + assistantTicks; // generate another random number between
-                                                                             // 200-300 and add the current assistant
-                                                                             // ticks to it
+                    breakSemaphore.acquire();
+                    System.out.printf("<%d><%d>%s is taking a break.%n", Main.tickCount, threadId, name);
+                    Thread.sleep(150 * Main.TICK_TIME_SIZE);
+                    randomNumber = random.nextInt(100) + 200;
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    // Thread.currentThread().interrupt();
                 } finally {
-                    assistantBreak.release(); // release the sempahore so another assistant can take a break
-                    System.out.println(
-                            "<" + Main.tickCount + ">" + "<" + threadId + ">" + name + " is back from break, back to work!");
-
+                    breakSemaphore.release();
+                    System.out.printf("<%d><%d>%s is back from break, back to work!%n", Main.tickCount, threadId, name);
                 }
             }
         }
-    }
-
-    public static void main(String[] args) {
     }
 }
