@@ -8,8 +8,8 @@ public class Main {
     public static int TICK_TIME_SIZE = 1000;
 
     public static int tickCount = 0;
-    private static List<Book> booksInHands = new ArrayList<Book>();
-    private static int booksCounter = 0;
+    private static List<Book> carriedBooks = new ArrayList<Book>();
+    private static int bookCount = 0;
 
 
 
@@ -30,9 +30,9 @@ public class Main {
         }
 
         // Configurable Ticks per Second
-        System.out.println("How many ticks will pass every second in the simulation?");
+        System.out.println("Choose mapping of ticks to seconds to determine how fast / slow the simulation will run");
         String ticksCount = scanner.nextLine();
-        System.out.println(ticksCount + " ticks will pass every second");
+        System.out.println("You have chosen " + ticksCount + "mapped to seconds");
         int ticks = Integer.parseInt(ticksCount);
         scanner.close();
 
@@ -51,15 +51,13 @@ public class Main {
         System.setOut(stream);
 
         
-        // Adding the threads to a list of threads
         List<Thread> threads = new ArrayList<>();
         threads.add(new Thread(new Delivery()));
         for (int i = 0; i < assistantsAmount; i++) {
-            threads.add(new Thread(new Assistant("<<Assistant-" + i + ">>", booksInHands, booksCounter)));
+            threads.add(new Thread(new Assistant("<<Assistant-" + i + ">>", carriedBooks, bookCount)));
         }
         threads.add(new Thread(new Customer()));
 
-        // Starting all the threads contained in the list
         for (Thread thread : threads) {
             thread.start();
         }

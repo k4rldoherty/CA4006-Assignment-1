@@ -2,31 +2,31 @@ import java.util.*;
 
 public class Delivery implements Runnable {
     public static Box box = new Box();
-    public static List<Book> DeliveryList = new ArrayList<Book>();
+    public static List<Book> deliveryList = new ArrayList<Book>();
 
     public static List<Book> getNewDelivery() {
         for (int i = 0; i < 10; i++) {
             Book book = new Book();
-            DeliveryList.add(book);
+            deliveryList.add(book);
         }
-        return DeliveryList;
+        return deliveryList;
     }
 
     public int size() {
-        int Size = DeliveryList.size();
+        int Size = deliveryList.size();
         return Size;
     }
 
     @Override
     public String toString() {
-        return DeliveryList.toString();
+        return deliveryList.toString();
     }
 
     public static String deliveryProbality() {
         Random rand = new Random();
         int randomNumber = rand.nextInt(100);
     
-        if (randomNumber == 1) {
+        if (randomNumber == 99) {
             return "True";
         } else {
             return "False";

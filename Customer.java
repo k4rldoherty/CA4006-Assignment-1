@@ -31,23 +31,23 @@ public class Customer implements Runnable {
                 Queue<String> queue = new LinkedList<>();
     
                 if (genre == "FICTION"){
-                    section = Section.FictionSection;
-                    queue = Section.FictionQueue;
+                    section = Section.fictionSection;
+                    queue = Section.fictionQueue;
                 } else if (genre == "CRIME"){
-                    section = Section.CrimeSection;
-                    queue = Section.CrimeQueue;
+                    section = Section.crimeSection;
+                    queue = Section.crimeQueue;
                 } else if (genre == "HORROR"){
-                    section = Section.HorrorSection;
-                    queue = Section.HorrorQueue;
+                    section = Section.horrorSection;
+                    queue = Section.horrorQueue;
                 } else if (genre == "ROMANCE"){
-                    section = Section.RomanceSection;
-                    queue = Section.RomanceQueue;
+                    section = Section.romanceSection;
+                    queue = Section.romanceQueue;
                 } else if (genre == "SPORT"){
-                    section = Section.SportSection;
-                    queue = Section.SportQueue;
+                    section = Section.sportSection;
+                    queue = Section.sportQueue;
                 } else if (genre == "FANTASY"){
-                    section = Section.FantasySection;
-                    queue = Section.FantasyQueue;
+                    section = Section.fantasySection;
+                    queue = Section.fantasyQueue;
                 }
                 if (!section.isEmpty() && queue.isEmpty()) {
                     section.remove(0);
@@ -66,23 +66,23 @@ public class Customer implements Runnable {
             Queue<String> queue = new LinkedList<>();
             for (String genre : genres){
                 if (genre == "FICTION"){
-                    section = Section.FictionSection;
-                    queue = Section.FictionQueue;
+                    section = Section.fictionSection;
+                    queue = Section.fictionQueue;
                 } else if (genre == "CRIME"){
-                    section = Section.CrimeSection;
-                    queue = Section.CrimeQueue;
+                    section = Section.crimeSection;
+                    queue = Section.crimeQueue;
                 } else if (genre == "HORROR"){
-                    section = Section.HorrorSection;
-                    queue = Section.HorrorQueue;
+                    section = Section.horrorSection;
+                    queue = Section.horrorQueue;
                 } else if (genre == "ROMANCE"){
-                    section = Section.RomanceSection;
-                    queue = Section.RomanceQueue;
+                    section = Section.romanceSection;
+                    queue = Section.romanceQueue;
                 } else if (genre == "SPORT"){
-                    section = Section.SportSection;
-                    queue = Section.SportQueue;
+                    section = Section.sportSection;
+                    queue = Section.sportQueue;
                 } else if (genre == "FANTASY"){
-                    section = Section.FantasySection;
-                    queue = Section.FantasyQueue;
+                    section = Section.fantasySection;
+                    queue = Section.fantasyQueue;
                 }
                 if (!queue.isEmpty() && !section.isEmpty()){
                     customer = queue.remove();

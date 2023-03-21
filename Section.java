@@ -2,62 +2,62 @@ import java.util.*;
 
 public class Section {
     static int capacity = 30;
-    static List<Book> FictionSection = new ArrayList<Book>();
-    static List<Book> HorrorSection = new ArrayList<Book>();
-    static List<Book> SportSection = new ArrayList<Book>();
-    static List<Book> FantasySection = new ArrayList<Book>();
-    static List<Book> RomanceSection = new ArrayList<Book>();
-    static List<Book> CrimeSection = new ArrayList<Book>();
-    static Queue<String> FictionQueue = new LinkedList<>();
-    static Queue<String> HorrorQueue = new LinkedList<>();
-    static Queue<String> SportQueue = new LinkedList<>();
-    static Queue<String> FantasyQueue = new LinkedList<>();
-    static Queue<String> RomanceQueue = new LinkedList<>();
-    static Queue<String> CrimeQueue = new LinkedList<>();
+    static List<Book> fictionSection = new ArrayList<Book>();
+    static List<Book> horrorSection = new ArrayList<Book>();
+    static List<Book> sportSection = new ArrayList<Book>();
+    static List<Book> fantasySection = new ArrayList<Book>();
+    static List<Book> romanceSection = new ArrayList<Book>();
+    static List<Book> crimeSection = new ArrayList<Book>();
+    static Queue<String> fictionQueue = new LinkedList<>();
+    static Queue<String> horrorQueue = new LinkedList<>();
+    static Queue<String> sportQueue = new LinkedList<>();
+    static Queue<String> fantasyQueue = new LinkedList<>();
+    static Queue<String> romanceQueue = new LinkedList<>();
+    static Queue<String> crimeQueue = new LinkedList<>();
 
     public static void AddBooksToShelves(Book book) {
 
         if (book.toString().equals("Fiction")) {
-            if (FictionSection.size() < capacity) {
-                FictionSection.add(book);
+            if (fictionSection.size() < capacity) {
+                fictionSection.add(book);
             } else {
                 System.out.println("Fiction Capacity Reached, Returning to stock box");
-                Box.BooksInBox.add(book);
+                Box.boxBooks.add(book);
             }
         } else if (book.toString().equals("Horror")) {
-            if (HorrorSection.size() < capacity) {
-                HorrorSection.add(book);
+            if (horrorSection.size() < capacity) {
+                horrorSection.add(book);
             } else {
                 System.out.println("Horror Capacity Reached, Returning to stock box");
-                Box.BooksInBox.add(book);
+                Box.boxBooks.add(book);
             }
         } else if (book.toString().equals("Sport")) {
-            if (SportSection.size() < capacity) {
-                SportSection.add(book);
+            if (sportSection.size() < capacity) {
+                sportSection.add(book);
             } else {
                 System.out.println("Sport Capacity Reached, Returning to stock box");
-                Box.BooksInBox.add(book);
+                Box.boxBooks.add(book);
             }
         } else if (book.toString().equals("Fantasy")) {
-            if (FantasySection.size() < capacity) {
-                FantasySection.add(book);
+            if (fantasySection.size() < capacity) {
+                fantasySection.add(book);
             } else {
                 System.out.println("FantasyCapacity Reached, Returning to stock box");
-                Box.BooksInBox.add(book);
+                Box.boxBooks.add(book);
             }
         } else if (book.toString().equals("Romance")) {
-            if (RomanceSection.size() < capacity) {
-                RomanceSection.add(book);
+            if (romanceSection.size() < capacity) {
+                romanceSection.add(book);
             } else {
                 System.out.println("Capacity Reached, Returning to stock box");
-                Box.BooksInBox.add(book);
+                Box.boxBooks.add(book);
             }
         } else if (book.toString().equals("Crime")) {
-            if (CrimeSection.size() < capacity) {
-                CrimeSection.add(book);
+            if (crimeSection.size() < capacity) {
+                crimeSection.add(book);
             } else {
                 System.out.println("Capacity Reached, Returning to stock box");
-                Box.BooksInBox.add(book);
+                Box.boxBooks.add(book);
             }
         }
     }
